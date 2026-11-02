@@ -1,7 +1,6 @@
 index/
 .env
 .env.*
-!.env.example
 .venv/
 __pycache__/
 eval/out/
