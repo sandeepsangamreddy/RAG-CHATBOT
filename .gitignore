@@ -1,6 +1,0 @@
-index/
-.env
-.venv/
-__pycache__/
-eval/out/
-.pytest_cache/
