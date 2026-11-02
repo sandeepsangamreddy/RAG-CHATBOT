@@ -16,9 +16,11 @@ class MockMessages:
 
     def __init__(self) -> None:
         self.calls = 0
+        self.last_request: dict[str, Any] = {}
 
     def create(self, **kwargs: Any) -> SimpleNamespace:
         self.calls += 1
+        self.last_request = kwargs
         return SimpleNamespace(content=[SimpleNamespace(
             type="text", text="The free look period is stated in the policy. [Section E.1.1, p.15]"
         )])
@@ -64,3 +66,4 @@ def test_in_scope_free_look_query_does_not_refuse(
     assert result["refused"] is False
     assert "free look period" in result["answer"].lower()
     assert client.messages.calls == 1
+    assert "temperature" not in client.messages.last_request

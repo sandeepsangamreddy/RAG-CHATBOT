@@ -113,8 +113,12 @@ class HybridRetriever:
                 n_results=max(1, dense_count),
                 include=["distances", "metadatas"],
             )
-        dense_ids = dense_result["ids"][0]
-        dense_distances = dense_result["distances"][0]
+        result_ids = dense_result.get("ids")
+        result_distances = dense_result.get("distances")
+        if not result_ids or not result_distances:
+            raise RuntimeError("Chroma returned no candidate IDs or distances for the query.")
+        dense_ids = result_ids[0]
+        dense_distances = result_distances[0]
         candidates: dict[str, _Candidate] = {}
         for rank, (chunk_id, distance) in enumerate(zip(dense_ids, dense_distances), start=1):
             chunk = self.by_id.get(chunk_id)

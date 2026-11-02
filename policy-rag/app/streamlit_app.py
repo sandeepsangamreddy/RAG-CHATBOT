@@ -7,6 +7,8 @@ import importlib
 import sys
 from pathlib import Path
 
+from anthropic import AuthenticationError
+
 try:
     st = importlib.import_module("streamlit")
 except ModuleNotFoundError as exc:
@@ -97,6 +99,12 @@ if prompt:
                 "role": "assistant", "content": result["answer"],
                 "retrieved": result["retrieved"], "refused": result["refused"],
             })
+        except AuthenticationError:
+            st.error(
+                "Anthropic rejected the API key (401). Check the ANTHROPIC_API_KEY "
+                "value in policy-rag/.env, replace it with a valid key from the "
+                "Anthropic Console, then restart Streamlit."
+            )
         except Exception as exc:
             LOGGER.exception("Question answering failed")
             st.error(f"Could not answer this question: {exc}")

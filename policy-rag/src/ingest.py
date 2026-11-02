@@ -208,22 +208,25 @@ def _table_text(table: Any) -> list[str]:
     return rendered
 
 
-def _table_records(page: fitz.Page) -> tuple[list[tuple[float, str]], list[tuple[float, float, float, float]]]:
+def _table_records(
+    page: fitz.Page, page_number: int
+) -> tuple[list[tuple[float, str]], list[tuple[float, float, float, float]]]:
     records: list[tuple[float, str]] = []
     boxes: list[tuple[float, float, float, float]] = []
     try:
         found = page.find_tables()
     except (AttributeError, RuntimeError) as exc:
-        LOGGER.debug("Table detection unavailable on page %s: %s", page.number + 1, exc)
+        LOGGER.debug("Table detection unavailable on page %s: %s", page_number, exc)
+        return records, boxes
+    if found is None:
         return records, boxes
     for table in found.tables:
         try:
             rendered = _table_text(table)
         except (RuntimeError, ValueError) as exc:
-            LOGGER.warning("Could not extract a table on page %s: %s", page.number + 1, exc)
+            LOGGER.warning("Could not extract a table on page %s: %s", page_number, exc)
             continue
         if rendered:
-            page_number = page.number + 1
             groups = [rendered]
             if 48 <= page_number <= 56:
                 combo_re = re.compile(
@@ -248,7 +251,8 @@ def _table_records(page: fitz.Page) -> tuple[list[tuple[float, str]], list[tuple
             for group_index, group in enumerate(groups):
                 if group:
                     records.append((float(table.bbox[1]) + group_index * 0.01, "\n".join(group)))
-            boxes.append(tuple(float(v) for v in table.bbox))
+            x0, y0, x1, y1 = (float(value) for value in table.bbox)
+            boxes.append((x0, y0, x1, y1))
     return records, boxes
 
 
@@ -267,15 +271,18 @@ def extract_records(pdf_path: Path) -> tuple[int, list[dict[str, Any]]]:
     document = fitz.open(pdf_path)
     raw_pages: list[list[tuple[str, str]]] = []
     raw_keys: list[list[str]] = []
-    for page_index, page in enumerate(document):
+    for page_index in range(document.page_count):
+        page = document.load_page(page_index)
         blocks = sorted(page.get_text("blocks"), key=lambda b: (round(float(b[1]), 1), float(b[0])))
-        tables, boxes = _table_records(page)
+        tables, boxes = _table_records(page, page_index + 1)
         use_columns = 10 <= page_index + 1 <= 27
         midpoint = float(page.rect.width) / 2
         left: list[tuple[float, str]] = []
         right: list[tuple[float, str]] = []
         normal: list[tuple[float, str]] = []
         for block in blocks:
+            if not isinstance(block, tuple):
+                continue
             text = _block_text(block)
             if not text or _inside_box(block, boxes):
                 continue
@@ -300,7 +307,10 @@ def extract_records(pdf_path: Path) -> tuple[int, list[dict[str, Any]]]:
         else:
             events = [(y, 0, value) for y, value in normal]
             events.extend((y, 0, "TABLE " + row) for y, row in tables)
-            page_records = [(f"{y:.3f}", value) for y, value in sorted(events, key=lambda event: event[0])]
+            page_records = [
+                (f"{y:.3f}", value)
+                for y, _, value in sorted(events, key=lambda event: event[0])
+            ]
         raw_pages.append(page_records)
         raw_keys.append([_line_key(text) for _, text in page_records if text.strip()])
     document.close()
@@ -490,6 +500,11 @@ def _chunk_records(records: list[dict[str, Any]], source_file: str) -> list[Chun
     for key in list(buffers):
         flush(key)
     flush_definition()
+    id_counts: collections.Counter[str] = collections.Counter()
+    for chunk in chunks:
+        id_counts[chunk.chunk_id] += 1
+        if id_counts[chunk.chunk_id] > 1:
+            chunk.chunk_id = f"{chunk.chunk_id}-{id_counts[chunk.chunk_id]}"
     return chunks
 
 

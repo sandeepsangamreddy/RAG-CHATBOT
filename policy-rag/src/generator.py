@@ -8,6 +8,7 @@ import time
 from typing import Any
 
 from anthropic import APIStatusError, Anthropic, RateLimitError
+from anthropic.types import MessageParam
 
 from src.config import settings
 from src.ingest import Chunk
@@ -41,17 +42,17 @@ class AnswerGenerator:
 
     def _message(self, *, model: str, max_tokens: int, system: str, content: str) -> str:
         """Call Claude with bounded retries for rate-limit and overload responses."""
+        messages: list[MessageParam] = [{"role": "user", "content": content}]
         for attempt in range(self.settings.retry_attempts):
             try:
                 response = self.client.messages.create(
                     model=model,
                     max_tokens=max_tokens,
-                    temperature=self.settings.temperature,
                     system=system,
-                    messages=[{"role": "user", "content": content}],
+                    messages=messages,
                 )
                 return "".join(
-                    block.text for block in response.content if getattr(block, "type", None) == "text"
+                    block.text for block in response.content if block.type == "text"
                 ).strip()
             except RateLimitError:
                 if attempt == self.settings.retry_attempts - 1:

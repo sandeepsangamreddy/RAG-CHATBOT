@@ -41,7 +41,6 @@ class Settings:
     max_tokens: int = 1000
     rewrite_max_tokens: int = 120
     judge_max_tokens: int = 300
-    temperature: float = 0.0
     retry_attempts: int = 3
     retry_base_delay_seconds: int = 1
     dense_candidates: int = 20

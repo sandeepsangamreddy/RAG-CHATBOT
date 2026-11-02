@@ -90,7 +90,6 @@ def judge_answer(
     response = client.messages.create(
         model=model or settings.judge_model,
         max_tokens=settings.judge_max_tokens,
-        temperature=0,
         system=JUDGE_RUBRIC,
         messages=[{"role": "user", "content": prompt}],
     )

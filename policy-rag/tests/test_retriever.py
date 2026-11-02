@@ -10,7 +10,7 @@ from src.retriever import HybridRetriever, expand_query
 EXPECTED_PAGES = [
     ("waiting period for cataract", {10, 11}),
     ("grace period", set(range(15, 28))),
-    ("compassionate visit limit", set(range(1, 10))),
+    ("compassionate visit limit", {40}),
     ("free look period", set(range(15, 28))),
     ("super reload first claim", set(range(1, 10))),
     ("piles surgery", {10, 11}),
@@ -33,6 +33,7 @@ def retriever() -> HybridRetriever:
         return HybridRetriever()
     except (FileNotFoundError, ImportError) as exc:
         pytest.skip(f"Retrieval dependencies/index unavailable: {exc}")
+    raise RuntimeError("Retriever fixture did not initialize.")
 
 
 @pytest.mark.parametrize(("query", "expected_pages"), EXPECTED_PAGES)
