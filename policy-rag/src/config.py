@@ -24,7 +24,7 @@ class Settings:
     """Typed settings shared by ingestion, retrieval, generation, and evaluation."""
 
     project_root: Path = PROJECT_ROOT
-    pdf_path: Path = PROJECT_ROOT / "data" / "Active_One_Max_policy_wording-160925.pdf"
+    pdf_path: Path = PROJECT_ROOT / "data" / "Active_One_Max_policy_wording-160925.pdf.pdf"
     dataset_path: Path = PROJECT_ROOT / "data" / "activ_one_max_golden_dataset.json"
     index_dir: Path = PROJECT_ROOT / "index"
     chroma_dir: Path = PROJECT_ROOT / "index" / "chroma"

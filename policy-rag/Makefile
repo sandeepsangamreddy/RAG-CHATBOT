@@ -13,7 +13,7 @@ install:
 	$(VENV_PYTHON) -m pip install -r requirements.txt
 
 ingest:
-	$(VENV_PYTHON) -m src.ingest --pdf data/Active_One_Max_policy_wording-160925.pdf --rebuild
+	$(VENV_PYTHON) -m src.ingest --rebuild
 
 chat:
 	$(VENV_PYTHON) -m streamlit run app/streamlit_app.py
