@@ -22,7 +22,7 @@ ask:
 	$(VENV_PYTHON) -m src.rag --ask "$(Q)"
 
 eval:
-	$(VENV_PYTHON) -m eval.run_eval
+	$(VENV_PYTHON) -m eval.run_eval $(EVAL_ARGS)
 
 test:
 	$(VENV_PYTHON) -m pytest -q

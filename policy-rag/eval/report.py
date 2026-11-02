@@ -17,7 +17,8 @@ METRIC_KEYS = (
     "mrr_page", "context_recall", "correctness", "completeness", "faithfulness",
     "judge_hallucination_rate", "refusal_precision", "refusal_recall", "refusal_f1",
     "false_refusal_rate", "out_of_scope_hallucination_rate", "citation_accuracy",
-    "mean_latency", "pass_rate",
+    "mean_latency", "pass_rate", "ragas_context_precision", "ragas_context_recall",
+    "ragas_faithfulness",
 )
 
 
@@ -36,6 +37,7 @@ def write_report(rows: list[dict[str, Any]], output_dir: Path) -> dict[str, Any]
     flat_rows: list[dict[str, Any]] = []
     for row in rows:
         judge = row.get("judge") or {}
+        ragas = row.get("ragas") or {}
         flat_rows.append({
             "id": row.get("id"), "category": row.get("category"), "query": row.get("query"),
             "answer": row.get("answer"), "refused": row.get("refused"),
@@ -50,6 +52,9 @@ def write_report(rows: list[dict[str, Any]], output_dir: Path) -> dict[str, Any]
             "correctness": judge.get("correctness"), "completeness": judge.get("completeness"),
             "faithfulness": judge.get("faithfulness"), "hallucination": judge.get("hallucination"),
             "judge_reason": judge.get("reason"), "pass": row.get("pass"),
+            "ragas_context_precision": ragas.get("context_precision"),
+            "ragas_context_recall": ragas.get("context_recall"),
+            "ragas_faithfulness": ragas.get("faithfulness"),
         })
     pd.DataFrame(flat_rows).to_csv(output_dir / "results.csv", index=False)
     (output_dir / "aggregate_metrics.json").write_text(
@@ -63,13 +68,15 @@ def write_report(rows: list[dict[str, Any]], output_dir: Path) -> dict[str, Any]
     for key in METRIC_KEYS:
         lines.append(f"| {key.replace('_', ' ')} | {_format(overall.get(key))} |")
     lines.extend(["", "## Per-category metrics", ""])
-    lines.append("| Category | N | Page hit@6 | Section hit@6 | Context recall | Correctness | Faithfulness | Refusal F1 | False refusal | OOS hallucination | Pass rate |")
-    lines.append("|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
+    lines.append("| Category | N | Page hit@6 | Section hit@6 | Context recall | Correctness | Judge faithfulness | Ragas precision | Ragas recall | Ragas faithfulness | Refusal F1 | False refusal | OOS hallucination | Pass rate |")
+    lines.append("|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
     for category, values in aggregate["categories"].items():
         lines.append(
             f"| {category} | {values['count']} | {_format(values['page_hit_at_6'])} | "
             f"{_format(values['section_hit_at_6'])} | {_format(values['context_recall'])} | "
             f"{_format(values['correctness'])} | {_format(values['faithfulness'])} | "
+            f"{_format(values['ragas_context_precision'])} | {_format(values['ragas_context_recall'])} | "
+            f"{_format(values['ragas_faithfulness'])} | "
             f"{_format(values['refusal_f1'])} | {_format(values['false_refusal_rate'])} | "
             f"{_format(values['out_of_scope_hallucination_rate'])} | {_format(values['pass_rate'])} |"
         )
@@ -111,12 +118,14 @@ def write_report(rows: list[dict[str, Any]], output_dir: Path) -> dict[str, Any]
     table.add_column("Context recall", justify="right")
     table.add_column("Refusal F1", justify="right")
     table.add_column("False refusal", justify="right")
+    table.add_column("Ragas faithfulness", justify="right")
     table.add_column("Pass rate", justify="right")
     for category, values in [("Overall", overall), *aggregate["categories"].items()]:
         table.add_row(
             category, str(values["count"]), _format(values["page_hit_at_6"]),
             _format(values["context_recall"]), _format(values["refusal_f1"]),
-            _format(values["false_refusal_rate"]), _format(values["pass_rate"]),
+            _format(values["false_refusal_rate"]), _format(values["ragas_faithfulness"]),
+            _format(values["pass_rate"]),
         )
     Console().print(table)
     return aggregate

@@ -1,0 +1,802 @@
+[
+  {
+    "id": "Q001",
+    "category": "Direct Factual / Lookup",
+    "user_query": "For how many days before hospitalization are medical expenses covered under Activ One MAX?",
+    "ground_truth_response": "Pre-Hospitalization Medical Expenses are covered for up to 90 days immediately prior to the date of an admissible Hospitalization under Section C.1 (Hospitalization Treatment), C.5 (Domiciliary Hospitalization), C.6 (Home Health Care) or C.7 (AYUSH Treatment), up to the Sum Insured.",
+    "verbatim_context": "The Company shall indemnify the Pre-Hospitalization Medical Expenses incurred, related to an admissible Hospitalization of the Insured Person under Section C.1 (Hospitalization Treatment) or Section C.5 (Domiciliary Hospitalization) or Section C.6 (Home Health Care) or Section C.7 (AYUSH Treatment) for up to 90 days immediately prior to the date of such Hospitalization. [...] Pre-Hospitalization Expenses (up to Sum Insured) 90 Days",
+    "source_reference": "Appendix A, Section C.2 Pre-Hospitalization Expenses (Page 30); Annexure III - Product Benefit Table (Page 46)"
+  },
+  {
+    "id": "Q002",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What is the post-hospitalization coverage period?",
+    "ground_truth_response": "Post-Hospitalization Medical Expenses are covered for up to 180 days from the date of discharge from the Hospital, related to an admissible Hospitalization under Sections C.1, C.5, C.6 or C.7, up to the Sum Insured.",
+    "verbatim_context": "The Company shall indemnify the Post-Hospitalization Medical Expenses incurred, related to an admissible Hospitalization of the Insured Person under Section C.1 (Hospitalization Treatment) or Section C.5 (Domiciliary Hospitalization) or Section C.6 (Home Health Care) or Section C.7 (AYUSH Treatment) for up to 180 days from the date of discharge from the Hospital. [...] Post-Hospitalization Expenses (up to Sum Insured) 180 Days",
+    "source_reference": "Appendix A, Section C.3 Post-Hospitalization Expenses (Page 30); Annexure III - Product Benefit Table (Page 46)"
+  },
+  {
+    "id": "Q003",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What is the standard waiting period for pre-existing diseases, and can it be reduced?",
+    "ground_truth_response": "The in-built Pre-Existing Diseases Waiting Period is 3 years. It can be reduced through the optional cover 'Reduction in Pre-Existing Disease Waiting Period': Option 1 reduces it from 3 years to 2 years, and Option 2 reduces it from 3 years to 1 year. This optional cover can only be opted at the inception of the first policy with the insurer.",
+    "verbatim_context": "Pre-Existing Diseases Waiting Period 3 years [...] Reduction in Pre-Existing Disease Waiting Period Option 1 - 3 Years to 2 Years Option 2 - 3 Years to 1 Year [...] This Optional Cover can only be opted at the time of inception of the first policy with Us and only for the Sum Insured originally opted at such inception.",
+    "source_reference": "Annexure III - Product Benefit Table, Waiting Period - Inbuilt Cover and Optional Covers (Page 47); Appendix A, Section C.13.2 (Page 35)"
+  },
+  {
+    "id": "Q004",
+    "category": "Direct Factual / Lookup",
+    "user_query": "How long is the specific disease / procedure waiting period?",
+    "ground_truth_response": "The Specific Diseases Waiting Period is 2 years (24 months of continuous coverage after the date of inception of the first policy with the insurer). It does not apply to claims arising due to an accident.",
+    "verbatim_context": "Specific Diseases Waiting Period 2 years [...] Expenses related to the treatment of the listed Conditions, surgeries / treatments shall be excluded until the expiry of 24 months of continuous coverage after the date of inception of the first policy with us. This exclusion shall not be applicable for claims arising due to an accident.",
+    "source_reference": "Annexure III - Product Benefit Table (Page 47); Section D.1.2 Specified disease / procedure Waiting Period (Code- Excl02) (Page 10)"
+  },
+  {
+    "id": "Q005",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What is the initial waiting period after the policy starts?",
+    "ground_truth_response": "There is a 30-day initial waiting period from the first policy commencement date during which treatment of any illness is excluded. Claims arising due to an accident are not subject to this waiting period.",
+    "verbatim_context": "Expenses related to the treatment of any illness within 30 days from the first policy commencement date shall be excluded except claims arising due to an accident, provided the same are covered. [...] Initial Waiting Period (Excluding Accidental [...] 30 Days",
+    "source_reference": "Section D.1.3 30-day Waiting Period (Code-Excl03) (Page 11); Annexure III - Product Benefit Table (Page 47)"
+  },
+  {
+    "id": "Q006",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What Base Sum Insured options are available?",
+    "ground_truth_response": "The Base Sum Insured options (INR) are: 2 Lacs, 3 Lacs, 4 Lacs, 5 Lacs, 7 Lacs, 10 Lacs, 15 Lacs, 20 Lacs, 25 Lacs, 50 Lacs, 75 Lacs, 1 Crore, 2 Crores, 3 Crores, 4 Crores, 5 Crores and 6 Crores.",
+    "verbatim_context": "Base Sum Insured (INR) 2 Lacs, 3 Lacs, 4 Lacs, 5 Lacs, 7 Lacs, 10 Lacs, 15 Lacs, 20 Lacs, 25 Lacs, 50 Lacs, 75 Lacs, 1 Crore, 2 Crores, 3 Crores, 4 Crores, 5 Crores, 6 Crores",
+    "source_reference": "Annexure III - Product Benefit Table (Page 46)"
+  },
+  {
+    "id": "Q007",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What deductible amounts can I choose under the Per Claim Deductible option?",
+    "ground_truth_response": "Under the Per Claim Deductible optional cover, the options are INR 15,000 (Option 1) or INR 25,000 (Option 2). The deductible applies to each and every admissible claim and does not reduce the available Sum Insured.",
+    "verbatim_context": "Per Claim Deductible Option 1 - INR 15,000 Option 2 - INR 25,000 [...] the Deductible specified in the Policy Schedule shall be applicable for each and every admissible claim made under this Policy [...] A Deductible does not reduce the available Sum Insured.",
+    "source_reference": "Annexure III - Product Benefit Table, Optional Covers (Page 47); Appendix A, Section C.13.4 Per Claim Deductible (Page 35)"
+  },
+  {
+    "id": "Q008",
+    "category": "Direct Factual / Lookup",
+    "user_query": "How much premium discount does the Preferred Provider Network (PPN) option give?",
+    "ground_truth_response": "The Preferred Provider Network (PPN) Discount optional cover gives a 10% discount on the premium payable. In exchange, if treatment is taken in a Hospital not listed as a Preferred Provider Network hospital, a 10% Co-Payment applies on each and every such claim.",
+    "verbatim_context": "the Policyholder will be entitled for a discount of 10% on the premium payable subject to below conditions [...] then the Policyholder / Insured Person shall bear a Co-Payment of 10% on each and every claim arising in such regard.",
+    "source_reference": "Appendix A, Section C.13.5 Preferred Provider Network (PPN) Discount (Page 35)"
+  },
+  {
+    "id": "Q009",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What is the maximum amount payable under the Compassionate Visit cover?",
+    "ground_truth_response": "The Compassionate Visit optional cover reimburses up to INR 50,000 for two-way economy class air ticket or travel fare for one immediate family member, when the Insured Person's Hospitalization exceeds 10 days.",
+    "verbatim_context": "Compassionate Visit Up to INR 50,000 for two-way travel fare if hospitalization exceeds 10 days [...] the cost of two way economy class air ticket or travel fare up to maximum of INR 50,000/- as specified in Policy Schedule",
+    "source_reference": "Annexure III - Product Benefit Table (Page 47); Appendix A, Section C.13.12 Compassionate Visit (Page 40)"
+  },
+  {
+    "id": "Q010",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What is the limit for the Annual Screening Package for Cancer Diagnosed Patients?",
+    "ground_truth_response": "The limit is INR 10,000 per member per Policy Year, payable on a reimbursement basis only.",
+    "verbatim_context": "INR 10,000 / Member / Policy Year [...] Expenses can be claimed under this Optional Cover on a reimbursement basis only.",
+    "source_reference": "Annexure III - Product Benefit Table (Page 47); Appendix A, Section C.13.14 (Page 41)"
+  },
+  {
+    "id": "Q011",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What is the sub-limit for the Durable Equipment Cover?",
+    "ground_truth_response": "The Durable Equipment Cover has a combined sub-limit of INR 5 Lacs or up to the Sum Insured, whichever is lower.",
+    "verbatim_context": "A combined sub-limit of INR 5 Lacs or up to Sum Insured, whichever is lower",
+    "source_reference": "Annexure III - Product Benefit Table, Optional Covers - Durable Equipment Cover (Page 47)"
+  },
+  {
+    "id": "Q012",
+    "category": "Direct Factual / Lookup",
+    "user_query": "How long is the free look period, and how quickly is the premium refunded if I cancel during it?",
+    "ground_truth_response": "The free look period is 30 days from the date of receipt of the policy document (electronic or otherwise). It applies to new individual policies (not to policies with tenure of less than a year, renewals, or porting/migration). A cancellation request during the free look period is processed and the premium refunded within 7 days of receipt of the request, subject to the applicable deductions.",
+    "verbatim_context": "The Insured Person shall be allowed free look period of thirty days from date of receipt of the policy document, whether received electronically or otherwise [...] A request received by insurer for cancellation of the policy during free look period shall be processed and premium shall be refunded within 7 days of receipt of such request.",
+    "source_reference": "Section E.1 Standard General Terms and Clauses - Free Look Period (Page 15)"
+  },
+  {
+    "id": "Q013",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What is the grace period for paying the renewal premium?",
+    "ground_truth_response": "The grace period is fifteen days where the premium payment mode is monthly, and thirty days in all other cases.",
+    "verbatim_context": "The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly and thirty days in all other cases.",
+    "source_reference": "Section B.1 Standard Definitions, Definition 23 - Grace Period (Page 3)"
+  },
+  {
+    "id": "Q014",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What are the minimum and maximum entry ages under this plan?",
+    "ground_truth_response": "Adults: minimum entry age 18 years, with no cap on maximum entry age. Dependent children (Floater / Multi Individual): 91 days to 25 years. For an Individual policy, the minimum age of entry is 5 years.",
+    "verbatim_context": "Entry Age (Adult) Minimum - 18 Years, Maximum - No capping [...] Entry Age (Child) Dependent Child (Floater / Multi Individual) - 91 Days to 25 Years [...] Individual – minimum age of entry - 5 Years",
+    "source_reference": "Annexure III - Product Benefit Table (Page 46)"
+  },
+  {
+    "id": "Q015",
+    "category": "Direct Factual / Lookup",
+    "user_query": "Is there a room rent cap in Activ One MAX?",
+    "ground_truth_response": "No fixed cap is stated in the base plan: Room Rent is covered at actuals up to the Sum Insured (ICU charges likewise). An optional 'Room Rent Type Options' cover allows modification of room category eligibility to Option 1 - Single Private Room or Option 2 - Shared Accommodation, as specified in the Policy Schedule.",
+    "verbatim_context": "Room Rent Actuals up to Sum Insured [...] ICU Charges Actuals up to Sum Insured [...] Room Rent Type Options Option 1 - Single Private Room Option 2 - Shared Accommodation",
+    "source_reference": "Annexure III - Product Benefit Table, In-built Covers and Optional Covers (Pages 46-47)"
+  },
+  {
+    "id": "Q016",
+    "category": "Direct Factual / Lookup",
+    "user_query": "Within how many days must a reimbursement claim be settled, and what happens if it's delayed?",
+    "ground_truth_response": "Claims other than cashless must be settled within 15 days from submission of the claim. If payment is delayed, the Company is liable to pay interest from the date of receipt of claim intimation till the date of payment at a rate of 2% above the bank rate.",
+    "verbatim_context": "Settlement of claims (other than cashless) shall be settled within 15 days from submission of claim. [...] the Company shall be liable to pay interest from the date of receipt of claim intimation till the date of payment of claim at a rate of 2% above the bank rate.",
+    "source_reference": "Section E.1.9 Claim Settlement (Provision for Penal Interest) (Page 17)"
+  },
+  {
+    "id": "Q017",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What is the moratorium period under this policy?",
+    "ground_truth_response": "The moratorium period is sixty continuous months of coverage (including portability and migration). After this, no policy or claim is contestable on grounds of non-disclosure or misrepresentation, except on grounds of established fraud.",
+    "verbatim_context": "After completion of sixty continuous months of coverage (including portability and migration) in health insurance policy, no policy and claim shall be contestable by the insurer on grounds of non-disclosure, misrepresentation, except on grounds of established fraud. This period of sixty continuous months is called as moratorium period.",
+    "source_reference": "Section E.1.10 Moratorium Period (Page 17)"
+  },
+  {
+    "id": "Q018",
+    "category": "Direct Factual / Lookup",
+    "user_query": "How much does Super Credit increase each year and what is the maximum?",
+    "ground_truth_response": "Super Credit increases by 100% of the Base Sum Insured per year, up to 500% of the Base Sum Insured, subject to a maximum of INR 3 Crores under this benefit. It increases irrespective of claims in the previous Policy Year, provided the Policy is renewed without a break.",
+    "verbatim_context": "100% of Base Sum Insured per year, up to 500% of Base Sum Insured [...] (up to Max of INR 3 Crores under this benefit) [...] irrespective of any claims in previous Policy Year, provided the Policy is renewed with the Company without a break",
+    "source_reference": "Annexure III - Product Benefit Table, Super Credit (Page 46); Appendix A, Section C.11 Super Credit (Page 31)"
+  },
+  {
+    "id": "Q019",
+    "category": "Direct Factual / Lookup",
+    "user_query": "What sum insured options are available for the optional Critical Illness Cover and what are its waiting and survival periods?",
+    "ground_truth_response": "Critical Illness Cover sum insured options are INR 10 Lacs, 15 Lacs, 20 Lacs and 25 Lacs. It has an Initial Waiting Period of 60 days and a Survival Period of 15 days.",
+    "verbatim_context": "Base Sum Insured Options - INR 10 Lacs, INR 15 Lacs, INR 20 Lacs and INR 25 Lacs [...] Initial Waiting Period – 60 Days [...] The payment of a Benefit under Section shall be subject to survival of the Insured Person for 15 days following the first diagnosis of the Critical Illness/undergoing the Surgical Procedure for the first time.",
+    "source_reference": "Annexure III - Product Benefit Table (Page 47); Appendix A, Section C.13.6 Critical Illness cover (Page 36)"
+  },
+  {
+    "id": "Q020",
+    "category": "Direct Factual / Lookup",
+    "user_query": "Which Insurance Ombudsman office covers Kerala, and how can I contact it?",
+    "ground_truth_response": "The Ernakulam office covers Kerala (along with Lakshadweep and Mahe). Address: Office of the Insurance Ombudsman, 2nd Floor, Pulinat Bldg., Opp. Cochin Shipyard, M. G. Road, Ernakulam - 682 015. Tel.: 0484 - 2358759 / 2359338. Email: bimalokpal.ernakulam@cioins.co.in.",
+    "verbatim_context": "Kerala, Lakshadweep, Mahe-a part of Puducherry [...] Office of the Insurance Ombudsman, 2nd Floor, Pulinat Bldg., [...] Opp. Cochin Shipyard, M. G. Road, Ernakulam - 682 015. [...] Tel.: 0484 - 2358759 / 2359338 [...] Email: bimalokpal.ernakulam@cioins.co.in",
+    "source_reference": "Annexure II - Contact details of Insurance Ombudsman offices, ERNAKULAM (Page 44)"
+  },
+  {
+    "id": "Q021",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "My Base Sum Insured got fully used up by a claim earlier this policy year. If I'm hospitalized again this year, will Super Reload pay, and how much at most?",
+    "ground_truth_response": "Yes, provided the conditions are met. Super Reload is triggered when the Base Sum Insured plus any accumulated Super Credit is exhausted or insufficient, and reloads an amount equal to the Base Sum Insured, unlimited times in the Policy Year. It is not payable for the first claim in the life of the Policy, but is payable for all subsequent claims, so a second claim qualifies. The claim must be admissible under Section C.1, C.5, C.6, C.7 or C.8, and the maximum liability under a single claim under Super Reload is the Base Sum Insured. Accumulated Super Credit is used before Super Reload.",
+    "verbatim_context": "If the Base Sum Insured along with accumulated Super Credit (if applicable) for the Policy Year in respect of the Insured Person, is completely exhausted or is insufficient for covering a claim, then We shall provide for a reload amounting to the Base Sum Insured (“Super Reload”), unlimited times during the Policy Year [...] The Super Reload shall not become payable to the first claim in the life of the Policy [...] Our total, maximum liability under a single claim under this Benefit shall not be more than the Base Sum Insured. [...] Base Sum Insured followed by; b. Super Credit (if inbuilt / opted and applicable) followed by; c. Super Reload followed by;",
+    "source_reference": "Appendix A, Section C.10 Super Reload (Page 31); Annexure III - Product Benefit Table (Page 46)"
+  },
+  {
+    "id": "Q022",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "In what order are the different sum insured buckets used up, and at what point can HealthReturns be used to pay in-patient bills?",
+    "ground_truth_response": "Sum Insured is utilized in this sequence: (a) Base Sum Insured, then (b) accumulated Super Credit (if inbuilt/opted and applicable), then (c) Super Reload, then (d) Cancer Booster (if opted and applicable). HealthReturns can be used for In-patient Medical Expenses only once the Base Sum Insured, accumulated Super Credit, Super Reload and Cancer Booster (if opted and applicable) are exhausted during the Policy Year.",
+    "verbatim_context": "a. Base Sum Insured followed by; b. Accumulated Super Credit (if inbuilt / opted and applicable) followed by; c. Super Reload followed by; d. Cancer Booster (if opted and applicable) [...] In-patient Medical Expenses provided that the Base Sum Insured, accumulated Super Credit (if any), Super Reload of Base Sum Insured and Cancer Booster (if opted and applicable) are exhausted during the Policy Year.",
+    "source_reference": "Section E.2.14 Utilization of Sum Insured (Page 27); Appendix A, Section C.12.2 HealthReturns - How can one spend HealthReturns (Page 34)"
+  },
+  {
+    "id": "Q023",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "I'm 30 and have a 50 lakh sum insured. Am I eligible for the Annual Health Check-up, and which tests are included?",
+    "ground_truth_response": "Yes. Insured Persons aged 18 years and above on the Commencement Date can avail the check-up once in a Policy Year, on a cashless basis only at Network Providers / Empanelled Service Providers. For Sum Insured INR 50 lacs - 6 Crores, the tests are: MER, CBC with ESR, ABO Group & Rh type, Urine-routine, Stool-routine, S Bilirubin (total/direct), SGOT, SGPT, GGT, Alkaline phosphatase, Total Protein, Albumin: Globulin, Liver Function Test, TMT, ECG, Cholesterol, LDL, HDL, Triglycerides, VLDL, Creatinine, Blood Urea Nitrogen, Uric acid, Hba1C, Chest X ray and USG Abdomen.",
+    "verbatim_context": "Insured Person(s) Aged 18 years and above on the Commencement Date of the Policy may avail a comprehensive health check-up once in a Policy Year [...] The health check-ups shall be arranged by Us only on cashless basis at Our Network Providers / Empanelled Service Providers [...] INR 50 lacs - 6 Crores [...] MER, CBC with ESR, ABO Group & [...] Rh type, Urine-routine, Stool-routine, [...] S Bilirubin (total / direct), SGOT, SGPT, [...] GGT, Alkaline phosphatase, [...] Total Protein, Albumin: Globulin, [...] Liver Function Test, TMT, ECG, [...] Cholesterol, LDL, HDL, Triglycerides, [...] VLDL, Creatinine, Blood Urea [...] Nitrogen, Uric acid, Hba1C, [...] Chest X ray, USG Abdomen",
+    "source_reference": "Appendix A, Section C.9 Annual Health Check-up and test table (Pages 30-31)"
+  },
+  {
+    "id": "Q024",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "How can someone earn the full 100% HealthReturns in a policy year?",
+    "ground_truth_response": "With a Green Healthy Heart Score: earning 13 or more Active Dayz every month gives Level 5 at 30% of monthly premium (accumulating to 30%), plus the annual slabs based on Active Dayz in the year: 20% for 275 Active Dayz and 50% for 325 Active Dayz (Green). The document's example: 30% accumulated monthly + 20% for 275 + 50% for 325 = 100% HealthReturns. Fitness Assessment Results are not considered for the annual slabs.",
+    "verbatim_context": "13 or more Level 5 6.0% 12% 30% [...] 275 4.0% 8.0% 20.0% [...] 325 10.0% 20.0% 50.0% [...] if an Insured Person has a Healthy Heart Score™ and accomplishes 13 days or more every month in a Policy Year, along with achieving at least 325 Active Dayz™ in the same Policy Year, they will be rewarded with 100% HealthReturns™. This includes 30% accumulated every month, 20% for achieving 275 Active Dayz, and 50% for achieving 325 Active Dayz. [...] It's important to note that the Fitness Assessment Results will not be considered for earning the annual slabs mentioned below.",
+    "source_reference": "Appendix A, Section C.12.2 HealthReturns - Step 3 Calculation Methodology, monthly and annual grids (Pages 33-34)"
+  },
+  {
+    "id": "Q025",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "My Healthy Heart Score is Amber and I logged 8 Active Dayz this month. What percentage of my premium do I earn as HealthReturns for the month?",
+    "ground_truth_response": "8 Active Dayz falls in the 7-9 band (Level 3). For an Amber Healthy Heart Score, Level 3 earns 4.8%. The grid is calculated on the Monthly Premium, so you earn 4.8% of your Monthly Premium for that month.",
+    "verbatim_context": "7-9 Level 3 2.4% 4.8% 12% [...] *The grid above is calculated on the Monthly Premium.",
+    "source_reference": "Appendix A, Section C.12.2 HealthReturns - Step 3 monthly grid (Page 33)"
+  },
+  {
+    "id": "Q026",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "What are the notification and pre-authorization timelines for a planned cashless hospitalization versus an emergency one?",
+    "ground_truth_response": "Planned: notice must be given at least 48 hours prior to admission, and it is advisable to contact the insurer to pre-authorise Cashless Facility at least 72 hours prior to the proposed treatment. Emergency: notice must be given within 24 hours of emergency Hospitalization or before discharge, whichever is earlier, and pre-authorisation must be requested within 24 hours of Hospitalization. In both cases the initial authorization letter is issued to the Network Provider within one hour of receiving complete information; once granted, treatment must take place within 15 days of the pre-authorization date.",
+    "verbatim_context": "Within 24 hours from the date of emergency Hospitalization required or before the Insured Person’s discharge from Hospital, whichever is earlier. [...] At least 48 hours prior to admission in Hospital in case of a planned Hospitalization [...] It is advisable that we must be contacted to pre-authorise Cashless Facility for planned treatment at least 72 hours prior to the proposed treatment. [...] We must be contacted to pre-authorise Cashless Facility within 24 hours of the Insured Person’s Hospitalization if the Insured Person has been Hospitalized in an Emergency. [...] The initial authorization letter shall be issued to the Network Provider immediately but not more than one hour of receiving the complete information. [...] the treatment must take place within 15 days of the pre- authorization date at a Network Provider",
+    "source_reference": "Section E.2.7 Claims - a) Notification of a Claim (Page 20); Section E.2.7.1 b) and c) (Pages 21-22)"
+  },
+  {
+    "id": "Q027",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "My father can't be moved to a hospital and is being treated at home. Is this covered, and are his pre- and post-treatment expenses also covered?",
+    "ground_truth_response": "Yes, under Domiciliary Hospitalization, if it continues for at least 3 consecutive days, the patient's condition is such that he could not be removed/admitted to a Hospital (or treatment is taken at Home due to non-availability of a hospital room in the Home city), and it is prescribed in writing by the treating Medical Practitioner. Because Sections C.2 and C.3 expressly include admissible Domiciliary Hospitalization under Section C.5, pre-hospitalization expenses (up to 90 days prior) and post-hospitalization expenses (up to 180 days after) are also covered.",
+    "verbatim_context": "Domiciliary Hospitalization continues for at least 3 consecutive days. [...] The condition of the Insured Person is such that he / she could not be removed / admitted to a Hospital. [...] The Domiciliary Hospitalization is prescribed in writing by treating Medical Practitioner [...] Section C.5 (Domiciliary Hospitalization) or Section C.6 (Home Health Care) or Section C.7 (AYUSH Treatment) for up to 90 days immediately prior to the date of such Hospitalization. [...] Section C.5 (Domiciliary Hospitalization) or Section C.6 (Home Health Care) or Section C.7 (AYUSH Treatment) for up to 180 days from the date of discharge from the Hospital.",
+    "source_reference": "Appendix A, Sections C.5 Domiciliary Hospitalization, C.2 and C.3 (Page 30)"
+  },
+  {
+    "id": "Q028",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "I'm getting a kidney transplant and my brother is the donor. What donor costs does the policy pay, and what is excluded?",
+    "ground_truth_response": "Under Organ Donor Expenses, the policy pays the donor's Medical Expenses listed under Section C.1 for Hospitalization for harvesting the organ, where the Insured Person is the recipient, provided the donation complies with the Transplantation of Human Organs Act 1994 (and related laws/rules) and the recipient's own C.1 claim for the transplant is admissible. Excluded: the donor's pre- and post-hospitalization expenses, expenses for organ transportation or preservation, and any other medical expenses or hospitalization of the donor consequent to the harvesting. Non-medical expenses related to an admissible C.8 claim are also covered under Claim Protect.",
+    "verbatim_context": "the organ donor’s Hospitalization for harvesting of the donated organ where an Insured Person is the recipient [...] Recipient Insured Person’s claim under Section C.1 (Hospitalization Treatment) is admissible under the Policy in relation to such organ transplant. [...] The organ donors Pre-Hospitalization Expenses and Post-Hospitalization Expenses. [...] Expenses related to organ transportation or preservation. [...] Any other Medical Expenses or Hospitalization of the organ donor consequent to the organ harvesting. [...] or Section C.8 (Organ Donor Expenses) during the Policy Period.",
+    "source_reference": "Appendix A, Section C.8 Organ Donor Expenses and Section C.4 Claim Protect (Page 30)"
+  },
+  {
+    "id": "Q029",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "The hospital bill has charges for gloves, an admission kit, and attendant charges. Are these covered?",
+    "ground_truth_response": "Yes, if the hospitalization claim is admissible. Claim Protect (Non-Medical Expense Waiver) covers the Non-Medical Expenses in all 4 lists of Annexure I when incurred in relation to a claim admissible under Sections C.1, C.5, C.6, C.7 or C.8. Gloves (List I, item 56) and Attendant Charges (List I, item 24) are in List I, and Admission Kit (item 27) is in List II.",
+    "verbatim_context": "The Company shall indemnify the Non-Medical Expenses listed under Annexure I (all 4 lists) to this Policy incurred in relation to a claim admissible under Section C.1 (Hospitalization Treatment [...] Claim Protect (Non-Medical Expense Waiver) Non-payable items will be covered (all 4 lists of Annexure I) [...] GLOVES [...] ATTENDANT CHARGES [...] ADMISSION KIT",
+    "source_reference": "Appendix A, Section C.4 Claim Protect (Page 30); Annexure III (Page 46); Annexure I - List I and List II (Pages 42-43)"
+  },
+  {
+    "id": "Q030",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "I bought my first policy 14 months ago. I need cataract surgery now. Is it covered?",
+    "ground_truth_response": "Cataract surgery is in the list of specified diseases/procedures, which are excluded until 24 months of continuous coverage from inception of the first policy (unless caused by an accident). At 14 months, it would not be covered under the standard waiting period. If the optional 'Reduction in Specific Disease Waiting Period' cover was opted at inception of the first policy, the waiting period is reduced to 1 year, in which case it would be admissible after one year of continuous coverage without a break. If the cataract is also a Pre-Existing Disease, the longer of the two waiting periods applies.",
+    "verbatim_context": "Eye Cataract Cataract Surgery [...] shall be excluded until the expiry of 24 months of continuous coverage after the date of inception of the first policy with us. [...] Reduction in Specific Disease Waiting Period 2 Years to 1 Year [...] This benefit can only be opted at the time of inception of the first policy with Us and only for the Sum Insured originally opted at such inception. [...] If any of the specified disease / procedure falls under the Waiting Period specified for pre-existing diseases, then the longer of the two Waiting Periods shall apply.",
+    "source_reference": "Section D.1.2 (Page 10); Annexure III Optional Covers (Page 47); Appendix A, Section C.13.1 (Page 35)"
+  },
+  {
+    "id": "Q031",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "I opted for the per-claim deductible. Can I use my HealthReturns to pay the deductible amount?",
+    "ground_truth_response": "Yes. Under the Per Claim Deductible cover, the Insured Person bears the opted deductible (INR 15,000 or INR 25,000) on each admissible claim, and the insurer's liability starts only once the deductible is exhausted. HealthReturns reward amounts may be utilized towards 'Payment of Deductible (if opted), wherever applicable', up to the value of rewards accrued.",
+    "verbatim_context": "the Insured Person shall bear on his / her own account an amount equal to the opted Deductible [...] Our liability to make payment under the Policy in respect of any claim made in the Policy Year will only commence once the Deductible has been exhausted. [...] Payment of Deductible (if opted), wherever applicable.",
+    "source_reference": "Appendix A, Section C.13.4 Per Claim Deductible (Page 35); Section C.12.2 HealthReturns (Page 34)"
+  },
+  {
+    "id": "Q032",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "On a family floater covering me, my spouse and our two kids, how is HealthReturns earned and who can use it?",
+    "ground_truth_response": "Each Insured Person is tracked separately on individual performance, but the overall premium is allocated to the adults: for Self, Spouse and Dependent Children (up to 25 yrs) the weightage is 1:1:0:0. Dependent children up to 25 years of age are not eligible to earn HealthReturns. However, earned HealthReturns can be utilized by any covered Insured Person under the Policy.",
+    "verbatim_context": "For the purpose of calculating HealthReturns™, We will allocate the overall premium to the adults in the Policy. [...] Dependent Children upto 25 years of Age shall not eligible for HealthReturns™. [...] Self , Spouse and Dependent Children (upto 25 yrs) 1:1:0:0 [...] Earned HealthReturnsTM can be utilized by any covered Insured Person under a Policy.",
+    "source_reference": "Appendix A, Section C.12.2 HealthReturns - How it works for a Family Floater Policy (Page 34)"
+  },
+  {
+    "id": "Q033",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "My daughter on our floater turns 25 at the next renewal. What happens to her coverage and the accumulated Super Credit?",
+    "ground_truth_response": "Children attaining 25 years at Renewal are moved out of the floater into an individual cover, with all continuity benefits remaining intact. Where the policy is split due to the child attaining the maximum permissible age, the Super Credit of the expiring Policy is apportioned to the renewed policies in proportion to the Base Sum Insured of each renewed Policy. No Claim Bonus earned stays with the Insured Persons covered under the original Policy.",
+    "verbatim_context": "children attaining 25 years at the time of Renewal will be moved out of the floater into an individual cover. However, all continuity benefits for such Insured Person on the Policy will remain intact. [...] in cases where the Policy is split due to the child attaining the maximum permissible age, the Super Credit of the expiring Policy shall be apportioned to such renewed policies in the proportion of the Base Sum Insured of each renewed Policy.",
+    "source_reference": "Section E.2.5 Other Renewal Conditions, point n (Page 20); Appendix A, Section C.11 Super Credit, point v (Page 31)"
+  },
+  {
+    "id": "Q034",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "If I increase my sum insured at renewal, how does that affect waiting periods, the moratorium, and Super Credit?",
+    "ground_truth_response": "Enhancement at renewal is subject to underwriting (only to the extent of the increase). All Waiting Periods apply afresh to the enhanced limit from the effective date of enhancement. For the moratorium, sixty continuous months apply from the date of enhancement only on the enhanced limits. Super Credit is calculated on the Sum Insured of the last completed Policy Year.",
+    "verbatim_context": "You may opt for enhancement of Sum Insured at the time of Renewal, subject to underwriting. All Waiting Periods as defined in the Policy shall apply afresh for this enhanced limit from the effective date of such enhancement [...] Wherever, the sum insured is enhanced, completion of sixty continuous months would be applicable from the date of enhancement of sums insured only on the enhanced limits. [...] If the Base Sum Insured under the Policy has been increased at the time of Renewal, the Super Credit shall be calculated on the Sum Insured of the last completed Policy Year.",
+    "source_reference": "Section E.2.5 c) (Pages 19-20); Section E.1.10 Moratorium Period (Page 17); Appendix A, Section C.11 vii (Page 31)"
+  },
+  {
+    "id": "Q035",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "If I'm diagnosed with a covered critical illness, when do I have to inform the insurer, when are documents due, and when is the lump sum payable?",
+    "ground_truth_response": "Intimate the claim within 7 days from the date of diagnosis of the Critical Illness. Claim documents must be submitted within 30 days of the event (the earliest of first diagnosis / surgical procedure / medical event). The Sum Insured is payable for an illness first diagnosed during the Policy Period after completion of 60 days from the Commencement Date, subject to the Insured Person surviving 15 days following the first diagnosis/surgical procedure.",
+    "verbatim_context": "You or anyone on behalf of the Insured Person(s) shall intimate a claim to Us within 7 days from the date of the Accident or diagnosis of the Critical Illness or admission in the Hospital (as the case may be) [...] shall submit the following documents within 30 (thirty) days of the earliest of the date of first diagnosis of the Critical Illness/ date of Surgical Procedure or date of occurrence of the medical event [...] We shall pay the Sum Insured as mentioned in the Policy Schedule / Product Benefit Table for that Critical Illness after completion of 60 days from the Commencement Date [...] subject to survival of the Insured Person for 15 days following the first diagnosis",
+    "source_reference": "Section E.2.7.2 Claim Procedure for Personal Accident, Critical Illness Benefit (Pages 23-24); Appendix A, Section C.13.6 (Page 36)"
+  },
+  {
+    "id": "Q036",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "I have the Personal Accident cover with a 20 lakh sum insured. If I permanently lose my thumb (both phalanges) in an accident, how much would I get?",
+    "ground_truth_response": "Under Permanent Partial Disability, loss of thumb (both phalanges) is payable at 25% of the Sum Insured. With a Personal Accident Sum Insured of INR 20 Lacs (an available option), 25% equals INR 5,00,000.",
+    "verbatim_context": "Loss of thumb [...] - both phalanges 25% [...] We will pay a percentage of the Sum Insured as per the below table [...] Base Sum Insured Options - INR 10 Lacs, INR 15 Lacs, INR 20 Lacs, INR 25 Lacs,",
+    "source_reference": "Appendix A, Section C.13.7.c Permanent Partial Disability table (Page 37); Annexure III Optional Covers (Page 47)"
+  },
+  {
+    "id": "Q037",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "If my policy covers treatment outside India and I want planned treatment abroad, how does the process work and what won't be paid?",
+    "ground_truth_response": "Treatment outside India is excluded unless specified as covered in the Policy Schedule. Where covered, for planned treatment the insurer/Empanelled Service Provider identifies 3 Hospitals; after the Insured Person confirms treatment abroad, 3 hospitals in the chosen country are identified (or a fourth option from the network may be chosen). The insurer arranges logistics and issues a Preliminary Medical Certificate valid only for that Hospital. Expenses in a different Hospital, or incurred before the Preliminary Medical Certificate is issued, are not covered. The recommended hospital list and Preliminary Medical Certificate are valid for three months.",
+    "verbatim_context": "Treatment taken outside India, unless specified to be covered in the Policy Schedule. [...] We / Our Empanelled Service Provider will identify 3 Hospitals from Our network. [...] will issue a Preliminary Medical Certificate valid only for that Hospital. [...] Any expense incurred in a different Hospital from the one specified in the Preliminary Medical Certificate will not be covered. [...] Any expense incurred before the issuance of the Preliminary Medical Certificate will not be covered. [...] both documents will have a validity of three months.",
+    "source_reference": "Section D.2.8 Geographical Exclusion (Page 14); Section E.2.7.4 Claims Procedure for Claims Outside India (Pages 24-25)"
+  },
+  {
+    "id": "Q038",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "I have Type 2 diabetes and opted for the Chronic Management Program (OPD). What consultations and tests do I get, and where?",
+    "ground_truth_response": "For Diabetes Type 2 (single condition), you are entitled to 1 Teleconsult - Physician, 1 Teleconsult - Endocrinologist, 1 Onboarding Physical HA (BMI / BP / RR / HR / HBA1C / Lipid Profile / Creatinine), and 1 Follow-up 6 months later (HBA1C / Lipid / BP / Heart Rate). The program is for Insured Persons aged 18 and above and is available only on a Cashless Facility basis at Network Providers and Empanelled Service Providers.",
+    "verbatim_context": "Diabetes Type 2 [...] Teleconsult - Endocrinologist 1 [...] Onboarding Physical HA includes BMI / BP / RR / HR / HBA1C / Lipid Profile / Creatinine 1 [...] Follow-up 6 months later HBA1C / Lipid / BP / Heart Rate 1 [...] Insured Person(s) who is aged 18 years and above will be entitled to avail access to a fixed number of (i) Medical Practitioner’s consultations and (ii) diagnostic tests [...] with a Cashless Facility basis only.",
+    "source_reference": "Annexure IV - Chronic Management Program, Single Condition - Diabetes Type 2 (Page 48); Appendix A, Section C.13.9 (Page 39)"
+  },
+  {
+    "id": "Q039",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "If I'm admitted to an AYUSH hospital, are pre- and post-hospitalization costs covered, and what can HealthReturns be used for in relation to AYUSH?",
+    "ground_truth_response": "AYUSH In-patient Care in an AYUSH Hospital or AYUSH Day Care Centre is covered at actuals up to Sum Insured. Pre-hospitalization (90 days) and post-hospitalization (180 days) expenses are covered for admissible hospitalization under Section C.7 (AYUSH Treatment). HealthReturns can be used for AYUSH Treatments in excess of the limits specified in the Policy Schedule / Product Benefit Table; such reimbursement claims can be submitted quarterly.",
+    "verbatim_context": "The Company shall indemnify the Medical Expenses incurred for Inpatient Care of the Insured Person under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems of medicines during the Policy Period in any AYUSH Hospital or AYUSH Day Care Centre. [...] AYUSH Treatment Actuals up to Sum Insured [...] Section C.7 (AYUSH Treatment) for up to 90 days immediately prior to the date of such Hospitalization. [...] AYUSH Treatments in excess of the limits as specified in Policy Schedule / Product Benefit Table of this Policy. [...] Reimbursement claims for (v) and (vi) can be submitted quarterly in a Policy Year.",
+    "source_reference": "Appendix A, Sections C.7, C.2 (Page 30) and C.12.2 (Page 34); Annexure III (Page 46)"
+  },
+  {
+    "id": "Q040",
+    "category": "Multi-hop Reasoning / Synthesis",
+    "user_query": "I pay my premium monthly. If I make a claim mid-year, what happens to my remaining instalments, and could I get a refund if I cancel later?",
+    "ground_truth_response": "In the event of a claim, all subsequent premium instalments immediately become due and payable, and the Company has the right to recover and deduct all pending instalments from the claim amount. For instalment policies with an admissible claim, future instalments for the current Policy Year are adjusted in the claim amount and no premium is refunded during the Policy Year. In any case, no refund is applicable on cancellation for Half Yearly, Quarterly and Monthly premium frequencies, and no refund is made where any claim has been admitted or lodged.",
+    "verbatim_context": "ln the event of a claim, all subsequent premium instalments shall immediately become due and payable [...] The Company has the right to recover and deduct all the pending instalments from the claim amount due under the Policy. [...] No refund is applicable for Half Yearly, Quarterly & Monthly premium frequencies. [...] no refunds of premium shall be made in respect of Cancellation where, any claim has been admitted or has been lodged or any benefit has been availed by the Insured Person under the Policy.",
+    "source_reference": "Section E.1.17 Premium Payment in Instalments (Pages 18-19); Section E.1.2 Cancellation (Page 15)"
+  },
+  {
+    "id": "Q041",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "Am I covered if I'm hospitalized during the grace period after my policy expired?",
+    "ground_truth_response": "It depends on the premium payment mode, and the document contains differing statements. Section E.1.3 (Renewal) states that coverage is not available during the grace period. However, for premiums paid in instalments (Half Yearly, Quarterly or Monthly), Section E.1.17 states the Policy remains in force during the grace period and claims arising during it are payable subject to policy terms; the Grace Period definition likewise says coverage is available during the Grace Period if premium is paid in instalments during the Policy Period. So for annual/one-time renewals there is no cover during the grace period; for instalment premiums, cover continues during the instalment grace period.",
+    "verbatim_context": "Coverage is not available during the grace period. [...] The Policy will be in force during such grace period and any claims arising during the Grace Period will be payable subject to policy terms and conditions. [...] Coverage is available during the Grace Period, if the premium is paid in instalments during the Policy Period",
+    "source_reference": "Section E.1.3 Renewal of Policy iv (Page 16); Section E.1.17 b) (Page 18); Section B.1 Definition 23 - Grace Period (Page 3)"
+  },
+  {
+    "id": "Q042",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "What's the deadline for submitting a post-hospitalization reimbursement claim?",
+    "ground_truth_response": "The document gives two different timelines. The prescribed time-limit table in Section E.2.7 states reimbursement of Post Hospitalization Expenses must be made within 15 days from completion of post-hospitalization treatment. Section E.2.7.1 e) i. states claims for Pre- and Post-Hospitalization Medical Expenses are to be submitted within 30 days of completion of the post-hospitalization treatment. A RAG system should surface both and recommend submitting within the shorter 15-day window. Delays may be condoned on merit where proved to be for reasons beyond the Insured Person's control.",
+    "verbatim_context": "Reimbursement of Post Hospitalization Expenses Within 15 days from completion of post Hospitalization treatment. [...] Claims for Pre-Hospitalization Medical Expenses and Post Hospitalization Medical Expenses to be submitted to us within 30 days of the completion of the post hospitalization treatment [...] Any delay in notification or submission may be condoned on merit where delay is proved to be for reasons beyond the control of the Insured Person",
+    "source_reference": "Section E.2.7 Claims - Prescribed Time Limit table (Page 20); Section E.2.7.1 e) Claims Documentation (Page 22); Section E.2.7 b) Note (Page 21)"
+  },
+  {
+    "id": "Q043",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "Is an injury from recreational scuba diving on holiday excluded under the hazardous sports exclusion, or only if I'm a professional diver?",
+    "ground_truth_response": "The Hazardous or Adventure sports exclusion (Excl09) is worded to exclude expenses for treatment necessitated due to participation 'as a professional' in hazardous or adventure sports, including scuba diving. The exclusion text does not extend to non-professional participation. Note that the separate definition of Adventure/Hazardous Sports in Section B.2 covers participation for entertainment or as a profession, trained or not, but the operative exclusion clause is limited to professional participation.",
+    "verbatim_context": "Expenses related to any treatment necessitated due to participation as a professional in hazardous or adventure sports, including but not limited to, para-jumping, rock climbing, mountaineering, rafting, motor racing, horse racing or scuba diving, hand gliding, sky diving, deep sea diving [...] in which an Insured Person participates or competes for entertainment or as part of his profession whether he / she is trained or not.",
+    "source_reference": "Section D.1.9 Hazardous or Adventure sports (Code-Excl09) (Page 12); Section B.2 Specific Definitions, Definition 1 (Page 5)"
+  },
+  {
+    "id": "Q044",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "Is treatment for a congenital anomaly covered? Does it matter whether it's internal or external?",
+    "ground_truth_response": "Yes, it matters. The Medical Exclusions exclude any conditions or abnormalities present at birth that are visible on the outside of the body, and related diseases or defects, which corresponds to an External Congenital Anomaly (in the visible and accessible parts of the body). The exclusion text does not refer to Internal Congenital Anomalies (not in the visible and accessible parts of the body); those are not excluded by this clause, though other terms such as Pre-Existing Disease waiting periods still apply.",
+    "verbatim_context": "Internal Congenital Anomaly [...] Congenital anomaly which is not in the visible and accessible parts of the body. [...] External Congenital Anomaly [...] Congenital anomaly which is in the visible and accessible parts of the body. [...] Any conditions or abnormalities that are present at birth and are visible on the outside of the body, as well as any related diseases or defects,",
+    "source_reference": "Section B.1 Definition 9 - Congenital Anomaly (Page 2); Section D.2.3 Medical Exclusions f) (Page 13)"
+  },
+  {
+    "id": "Q045",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "Is plastic or cosmetic surgery ever covered?",
+    "ground_truth_response": "Cosmetic or plastic surgery or treatment to change appearance is excluded, unless it is for reconstruction following an Accident, Burn(s) or Cancer, or is part of medically necessary treatment to remove a direct and immediate health risk to the insured, which must be certified by the attending Medical Practitioner. Separately, Plastic Surgery medically necessitated due to Injury is listed as a covered expense under hospitalization.",
+    "verbatim_context": "Expenses for cosmetic or plastic surgery or any treatment to change appearance unless for reconstruction following an Accident, Burn(s) or Cancer or as part of medically necessary treatment to remove a direct and immediate health risk to the insured. For this to be considered a medical necessity, it must be certified by the attending Medical Practitioner. [...] Plastic Surgery, medically necessitated due to Injury.",
+    "source_reference": "Section D.1.8 Cosmetic or plastic Surgery (Code-Excl08) (Page 12); Appendix A, Section C.1.1.1 c (Page 29)"
+  },
+  {
+    "id": "Q046",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "What conditions must be met for bariatric (obesity) surgery to be covered?",
+    "ground_truth_response": "Obesity Treatment (Bariatric Surgery) during Hospitalization is covered at actuals up to Sum Insured, subject to all conditions in Excl06: (a) surgery is on the advice of the Doctor; (b) the surgery/procedure is supported by clinical protocols; (c) the member is 18 years of age or older; and (d) BMI is greater than or equal to 40, or greater than or equal to 35 with any of these severe co-morbidities following failure of less invasive weight loss methods: obesity-related cardiomyopathy, coronary heart disease, severe sleep apnea, or uncontrolled Type 2 Diabetes.",
+    "verbatim_context": "Obesity Treatment: Medical Expenses incurred towards treatment taken by the Insured Person during Hospitalization Treatment under Section C.1 of the Insured Person arising out of Hospitalization for a Bariatric Surgery [...] Surgery to be conducted is upon the advice of the Doctor. [...] The surgery / Procedure conducted should be supported by clinical protocols. [...] The member has to be 18 years of age or older and [...] greater than or equal to 40 or [...] greater than or equal to 35 in conjunction with any of the following severe co-morbidities following failure of less invasive methods of weight loss:",
+    "source_reference": "Appendix A, Section C.1.1.1 h (Page 29); Section D.1.6 Obesity / Weight Control (Code- Excl06) (Pages 11-12)"
+  },
+  {
+    "id": "Q047",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "I want LASIK to fix my eyesight. Is refractive error correction covered?",
+    "ground_truth_response": "Treatment for correction of eyesight due to refractive error of less than 7.5 dioptres is permanently excluded. Refractive Error Correction surgery is also on the specified disease/procedure list, so even where the refractive error is 7.5 dioptres or more, it is subject to the 24-month specific waiting period (unless due to an accident). Separately, Femto Laser Surgeries are listed under Specific treatment exclusions.",
+    "verbatim_context": "Expenses related to the treatment for correction of eye sight due to refractive error less than 7.5 dioptres. [...] Refractive Error Correction Correction Surgery [...] Femto Laser Surgeries",
+    "source_reference": "Section D.1.15 Refractive Error (Code-Excl15) (Page 12); Section D.1.2 f) list (Page 10); Section D.2.6 Specific treatment Exclusion (Page 14)"
+  },
+  {
+    "id": "Q048",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "Is dental treatment covered?",
+    "ground_truth_response": "Generally dental/oral treatment related to natural teeth and gingiva is excluded, except if required by an Insured Person while Hospitalized due to an Accident. Additionally, Section C.1.1.1 lists Dental Treatment under Inpatient Care, medically necessitated due to Illness or Injury, as a covered expense. Out-patient dental treatment is not covered.",
+    "verbatim_context": "Dental / Oral Treatment: Treatment, procedures and preventive, diagnostic, restor [...] ative, cosmetic services related to disease, disorder and conditions related to natural teeth and gingiva except if required by an Insured Person while Hospitalized due to an Accident [...] Dental Treatment under Inpatient Care, medically necessitated due to Illness or Injury.",
+    "source_reference": "Section D.2.3 Medical Exclusions h) (Page 13); Appendix A, Section C.1.1.1 b (Page 29)"
+  },
+  {
+    "id": "Q049",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "Are pregnancy complications covered — specifically an ectopic pregnancy or a miscarriage?",
+    "ground_truth_response": "Maternity expenses traceable to childbirth (including complicated deliveries and caesarean sections) are excluded, except ectopic pregnancy, which is therefore not excluded by this clause. Expenses towards miscarriage are excluded unless the miscarriage is due to an accident. Lawful medical termination of pregnancy is excluded.",
+    "verbatim_context": "Medical treatment expenses traceable to childbirth (including complicated deliveries and caesarean sections incurred during hospitalization) except ectopic pregnancy; [...] Expenses towards miscarriage (unless due to an accident) and lawful medical termination of pregnancy during the policy period",
+    "source_reference": "Section D.1.18 Maternity Expenses (Code-Excl18) (Page 13)"
+  },
+  {
+    "id": "Q050",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "What happens if I'm admitted to a hospital that the insurer has excluded?",
+    "ground_truth_response": "Expenses at a hospital or provider specifically excluded by the insurer (as disclosed on its website or notified to policyholders) are not admissible. However, in life-threatening situations or following an accident, expenses up to the stage of stabilization are payable, but not the complete claim. Note that Section C.4 states the Excluded Providers exclusion does not apply to the Claim Protect (Non-Medical Expense Waiver) cover.",
+    "verbatim_context": "Expenses incurred towards treatment in any hospital or by any Medical Practitioner or any other provider specifically excluded by the Insurer as disclosed in website [...] However, in case of life threatening situations or following an accident, expenses up to the stage of stabilization are payable but not the complete claim. [...] Exclusion 11. Excluded Providers: (Code- Excl11) of Section D.1. shall not apply to this Cover.",
+    "source_reference": "Section D.1.11 Excluded Providers (Code-Excl11) (Page 12); Appendix A, Section C.4 Claim Protect (Page 30)"
+  },
+  {
+    "id": "Q051",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "My spouse is a doctor. If she treats me, can I claim for it?",
+    "ground_truth_response": "Not by default. A Medical Practitioner who shares the same residence as the Insured Person and is a Family Member is not considered a Medical Practitioner under the Policy. Treatments provided by a Medical Practitioner who is a family member or resides in the same household are excluded, unless pre-approval is obtained from the insurer.",
+    "verbatim_context": "Medical Practitioner who is sharing the same residence as the Insured Person and is a Family Member of the Insured Person are not considered as Medical Practitioner under the scope of this Policy. [...] Treatments provided by a Medical Practitioner who is a family member of the Insured Person or resides in the same household, unless pre-approval is obtained from Us.",
+    "source_reference": "Section B.1 Definition 36 - Medical Practitioner (Page 4); Section D.2.7 Activities and Profession Exclusions c) (Page 14)"
+  },
+  {
+    "id": "Q052",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "I ported to this policy from another insurer where I had 3 years of continuous cover. Does the 30-day initial waiting period still apply to me?",
+    "ground_truth_response": "No. The 30-day waiting period exclusion does not apply if the Insured Person has Continuous Coverage for more than twelve months. It would, however, apply to any enhanced sum insured granted subsequently. Portability also reduces the PED and specific disease waiting periods to the extent of prior coverage.",
+    "verbatim_context": "This exclusion shall not, however, apply if the Insured Person has Continuous Coverage for more than twelve months. [...] The within referred Waiting Period is made applicable to the enhanced sum insured in the event of granting higher sum insured subsequently. [...] If the Insured Person is continuously covered without any break as defined under the applicable norms on portability stipulated by IRDAI, then Waiting Period for the same would be reduced to the extent of prior coverage.",
+    "source_reference": "Section D.1.3 30-day Waiting Period (Code-Excl03) (Page 11); Section D.1.1 c) / D.1.2 e) (Page 10)"
+  },
+  {
+    "id": "Q053",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "I had kidney stones diagnosed a year before buying the policy. Which waiting period applies — 2 years or 3 years?",
+    "ground_truth_response": "Stones in the urinary system (kidney, ureter, urinary bladder) are on the specified disease list (2-year waiting period). Because the condition was diagnosed before the policy started, it is also a Pre-Existing Disease (3-year waiting period). Where a specified disease falls under the PED waiting period, the longer of the two applies, so the 3-year PED waiting period applies (unless reduced via the optional PED reduction cover or portability credit). It must also have been declared and accepted.",
+    "verbatim_context": "Stones in Urinary System [...] (Stone in the Kidney, Ureter, Urinary Bladder) [...] If any of the specified disease / procedure falls under the Waiting Period specified for pre-existing diseases, then the longer of the two Waiting Periods shall apply. [...] If any of the Illness / conditions listed above are Pre-Existing Diseases, then they shall be covered only after the completion of the Pre-Existing Disease Waiting Period described in Section D.1.1. [...] Pre-Existing Diseases Waiting Period 3 years",
+    "source_reference": "Section D.1.2 c) and f) list item 6 (Pages 10-11); Annexure III Waiting Period (Page 47)"
+  },
+  {
+    "id": "Q054",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "Can I claim Cancer Booster on a cashless basis, and how many times per year?",
+    "ground_truth_response": "No, Cancer Booster expenses can be claimed on a reimbursement basis only. Multiple claims during the Policy Year are payable, but only up to the Base Sum Insured, which is available only once during the Policy Year. Cancer Booster is used last, after Base Sum Insured, Super Credit and Super Reload. It is renewable lifelong and renewal cannot be denied based on the previous year's claims experience.",
+    "verbatim_context": "Expenses can be claimed under this Optional Cover on a reimbursement basis only. [...] Multiple claims during the Policy Year are payable under this Optional Cover, but upto the Base Sum insured. Such Base Sum Insured is available only once during the Policy Year. [...] This Benefit shall be renewed life long and the Company shall not deny Renewal based on claims experience in the previous Policy Year.",
+    "source_reference": "Appendix A, Section C.13.10 Cancer Booster (Page 39)"
+  },
+  {
+    "id": "Q055",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "Wheelchairs are listed as excluded under Prosthesis and Devices. Can I still claim one under the Durable Medical Equipment cover?",
+    "ground_truth_response": "Yes, if the Durable Medical Equipment optional cover is in force. Wheelchair is on its list, and the cover states any exclusion under the Policy for the listed equipment does not apply to it. Conditions: the expense must relate to an admissible hospitalization under C.1, C.5 or C.6; the need must be prescribed during hospitalization or within 30 days post discharge; purchase/rental must be within 30 days of the recommendation; and claims reduce the Sum Insured.",
+    "verbatim_context": "Expenses for prosthesis (artificial body parts), corrective devices, external durable medical equipment, wheelchairs, crutches [...] Any Exclusion under the Policy with respect to any of the above listed Durable Medical Equipment shall not be applicable for this Optional Cover. [...] The need for Durable Medical Equipment is prescribed by an authorised Medical Practitioner during Hospitalization or within 30 days post discharge of the Insured Person from the Hospital. [...] Any purchase / renting of the Durable Medical Equipment should be done within 30 days of such recommendation. [...] Any claim made under this cover will reduce the Sum Insured of the Underlying Policy.",
+    "source_reference": "Section D.2.4 Prosthesis and Devices c) (Page 13); Appendix A, Section C.13.11 Durable Medical Equipment Cover (Page 40)"
+  },
+  {
+    "id": "Q056",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "Can I get Home Health Care paid on reimbursement if I arrange a nurse myself?",
+    "ground_truth_response": "No. Home Health Care requires pre-authorisation and is not available on reimbursement basis. The services are provided through Network Providers / Empanelled Service Providers in select cities for select treatment procedures only. The treatment must otherwise require In-patient Care admissible under C.1, be prescribed in writing, and daily treatment records signed by the treating Medical Practitioner must be maintained.",
+    "verbatim_context": "This Benefit requires pre-authorisation and is not available on reimbursement basis. [...] The foregoing home treatment services are provided through Network Provider / Empanelled Service Provider in select cities for select treatment procedures only. [...] Records of the treatment administered, duly signed by the treating Medical Practitioner, are maintained for each day of the Home treatment.",
+    "source_reference": "Appendix A, Section C.6 Home Health Care (Page 30)"
+  },
+  {
+    "id": "Q057",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "I was admitted for 18 hours and then discharged. Will my claim be paid?",
+    "ground_truth_response": "Only if the treatment qualifies as a Day Care Treatment. Hospitalization expenses are admissible only for a minimum of 24 consecutive hours, but this time limit does not apply to Day Care Treatments (procedures under general or local anaesthesia completed in under 24 hours due to technological advancement that would otherwise require over 24 hours' hospitalization). Treatment normally taken on an out-patient basis is not a Day Care Treatment.",
+    "verbatim_context": "Expenses of Hospitalization for a minimum period of 24 consecutive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatments. [...] Undertaken under General or Local Anaesthesia in a hospital/day care centre in less than 24 hours because of technological advancement, and [...] Treatment normally taken on an out-patient basis is not included in the scope of this definition.",
+    "source_reference": "Appendix A, Section C.1 Note a (Page 29); Section B.1 Definition 13 - Day Care Treatment (Page 2)"
+  },
+  {
+    "id": "Q058",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "We just had a baby. Can we add her to the policy mid-term?",
+    "ground_truth_response": "Mid-term inclusion is allowed only upon marriage or childbirth, and for a child, only after the child has completed 90 days and is less than 1 year of age, with additional differential premium calculated pro rata. Otherwise a child can be added only at the next Renewal (or start of the next Policy Year in multi-year policies). For any newly added member, the Pre-existing Disease clause, exclusions, loading and Waiting Periods apply afresh.",
+    "verbatim_context": "Option of Mid-term inclusion of a Person in the Policy as an Insured will be only upon marriage or childbirth (inclusion of child only after completed 90 days and less than 1 year of age), Additional differential premium will be calculated on a pro rata basis. [...] Otherwise child addition can happen only in next Renewal or at the start of next Policy Year in multi-year policies. [...] the Pre-existing Disease clause, exclusions, loading (if any) and Waiting Periods will be applicable afresh for that member.",
+    "source_reference": "Section E.2.5 Other Renewal Conditions b) (Page 19)"
+  },
+  {
+    "id": "Q059",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "Would a diagnosis of carcinoma in situ of the breast trigger a payout under the optional Critical Illness Cover?",
+    "ground_truth_response": "No. Critical Illness Cover pays for 'Cancer of Specified Severity', whose definition excludes all tumours histologically described as carcinoma in situ, specifically including Carcinoma in situ of breasts. (Note this is distinct from the Second Medical Opinion 'Cancer Treatment' definition, which includes in-situ cancer.)",
+    "verbatim_context": "CANCER OF SPECIFIED SEVERITY [...] All Tumors which are histologically described as carcinoma in situ, benign, pre-malignant, borderline malignant, low malignant potential, neoplasm of unknown behaviour, or non-invasive, including but not limited to: Carcinoma in situ of breasts, Cervical dysplasia CIN-1, CIN-2 and CIN-3; [...] Any In-situ Cancer which is limited to the epithelium where it originated and did not invade the stroma or the surrounding tissues.",
+    "source_reference": "Appendix A, Section C.13.6 List of Critical Illnesses (Page 36); Section B.1 Definition 7 (Page 2); Section B.2 Definition 15 - Cancer Treatment (Page 6)"
+  },
+  {
+    "id": "Q060",
+    "category": "Edge Cases / Complex Conditions",
+    "user_query": "My oncologist recommends Cyber Knife radiosurgery. The policy covers 'Stereotactic Radio Surgeries' as a modern procedure. Is Cyber Knife covered?",
+    "ground_truth_response": "The document lists 'Stereotactic Radio Surgeries' in the indicative list of covered Modern Procedures / Treatments, but separately and explicitly lists 'Cyber Knife Treatment' under the Specific treatment Exclusion (D.2.6). Based on the document text, Cyber Knife Treatment is specifically excluded. Other D.2.6 exclusions include Hyperbaric Oxygen Therapy, EECP, RFQMR and use of Radio Frequency probe for ablation.",
+    "verbatim_context": "Stereotactic Radio Surgeries [...] Treatment involving Rotational Field Quantum Magnetic Resonance (RFQMR), External Counter Pulsation (ECP), Enhanced External Counter Pulsation (EECP), Hyperbaric Oxygen Therapy, KTP Laser Surgeries, Cyber Knife Treatment, Femto Laser Surgeries, Bioabsorbable Stents, Bioabsorbable Valves, Bioabsorbable Implants. Use of Radio Frequency (RF) probe for ablation.",
+    "source_reference": "Appendix A, Section C.1.1.1 e - Modern Procedures (Page 29); Section D.2.6 Specific treatment Exclusion (Page 14)"
+  },
+  {
+    "id": "Q061",
+    "category": "Conversational / Persona-based",
+    "user_query": "ugh i literally bought this policy like 10 days ago and just broke my leg in a bike accident. ER + surgery. pls tell me im not stuck paying because of some waiting period??",
+    "ground_truth_response": "You're not blocked by the 30-day waiting period: it excludes treatment of illness in the first 30 days, but claims arising due to an accident are excepted. The specific disease waiting period also doesn't apply to accident claims. Hospitalization (room, ICU, surgeon fees, OT, implants) is covered at actuals up to Sum Insured. For an emergency hospitalization, notify the insurer within 24 hours or before discharge, whichever is earlier; for cashless at a Network Provider, contact them within 24 hours of admission. Accident claims need an MLC/FIR copy.",
+    "verbatim_context": "Expenses related to the treatment of any illness within 30 days from the first policy commencement date shall be excluded except claims arising due to an accident, provided the same are covered. [...] This exclusion shall not be applicable for claims arising due to an accident. [...] Within 24 hours from the date of emergency Hospitalization required or before the Insured Person’s discharge from Hospital, whichever is earlier. [...] MLC / FIR Copy – in Accident cases only,",
+    "source_reference": "Section D.1.3 (Page 11); Section D.1.2 a) (Page 10); Section E.2.7 a) (Page 20); Section E.2.7 b) x. (Page 21)"
+  },
+  {
+    "id": "Q062",
+    "category": "Conversational / Persona-based",
+    "user_query": "my mom (58) has had diabetes for like 8 yrs. we just got her on Activ One MAX. if she gets admitted bcz of sugar issues will u guys pay or do we wait forever?",
+    "ground_truth_response": "As a pre-existing disease, diabetes-related hospitalization is normally excluded until the 3-year PED waiting period ends (if declared and accepted). Options that change this: the optional Chronic Care (Day 1 In-patient Hospitalization) cover waives the PED waiting period and initial waiting period for listed chronic conditions including Diabetes, covering admissible hospitalization from Day 1 (subject to its premium grid/loading). Alternatively, the optional PED reduction cover can reduce the waiting period to 2 years or 1 year if opted at inception. Check the Policy Schedule for what's in force.",
+    "verbatim_context": "Pre-Existing Diseases Waiting Period 3 years [...] Pre-Existing Disease Waiting Period and Initial Waiting Period will be waived for the [...] listed chronic conditions [...] 1. Diabetes [...] Option 1 - 3 Years to 2 Years [...] Coverage under the Policy after the expiry of months as specified in the Policy Schedule / Product Benefit Table of this Policy for any pre-existing disease is subject to the same being declared at the time of application and accepted by Insurer.",
+    "source_reference": "Annexure III - Product Benefit Table (Page 47); Appendix A, Section C.13.8 (Page 38); Section D.1.1 d) (Page 10)"
+  },
+  {
+    "id": "Q063",
+    "category": "Conversational / Persona-based",
+    "user_query": "the hospital's bill has a bunch of random stuff — diapers, thermometer, food charges, 'misc charges'. my friend says insurance never pays for that junk. true??",
+    "ground_truth_response": "Not necessarily under this plan. Activ One MAX includes Claim Protect (Non-Medical Expense Waiver), which covers non-payable items in all 4 lists of Annexure I when related to an admissible hospitalization claim. Diaper of any type, Thermometer and Food Charges (other than patient's diet provided by hospital) are in List I, and Incidental Expenses / Misc. Charges (not explained) are in List II. Confirm Claim Protect is mentioned in your Policy Schedule.",
+    "verbatim_context": "Claim Protect (Non-Medical Expense Waiver) Non-payable items will be covered (all 4 lists of Annexure I) [...] DIAPER OF ANY TYPE [...] THERMOMETER [...] FOOD CHARGES [...] INCIDENTAL EXPENSES / MISC. CHARGES (NOT EXPLAINED) [...] may be covered under this Product if Claim Protect (Non-Medical Expense Waiver) is applicable to You and mentioned in the Policy Schedule.",
+    "source_reference": "Annexure III (Page 46); Annexure I Lists I and II (Pages 42-43); Section A Annexures Summary (Page 1)"
+  },
+  {
+    "id": "Q064",
+    "category": "Conversational / Persona-based",
+    "user_query": "my brother has been really struggling with depression and the doc wants him admitted to a psych facility. does the insurance even cover mental health stuff or is that excluded?",
+    "ground_truth_response": "Yes, mental illness hospitalization is covered. Medical Expenses during Hospitalization arising out of a condition caused by or associated with medical illness, stress, anxiety, depression or a medical condition impacting mental health are covered at actuals up to Sum Insured. Standard terms (24-hour minimum hospitalization, medically necessary, waiting periods) still apply.",
+    "verbatim_context": "Mental Illness Hospitalization: Medical Expenses incurred towards treatment taken by the Insured Person during Hospitalization Treatment under Section C.1 of the Insured Person during the Policy Period, arising out of a condition caused by or associated to medical illness, stress, anxiety, depression or a medical condition impacting mental health of the Insured. [...] Mental Illness Hospitalization Actuals up to Sum Insured",
+    "source_reference": "Appendix A, Section C.1.1.1 g (Page 29); Annexure III (Page 46)"
+  },
+  {
+    "id": "Q065",
+    "category": "Conversational / Persona-based",
+    "user_query": "So I'm 3 months pregnant (yay!) — will my delivery and the hospital stay be covered? Or c-section if needed?",
+    "ground_truth_response": "Congratulations! Unfortunately, this policy excludes maternity: medical treatment expenses traceable to childbirth, including complicated deliveries and caesarean sections during hospitalization, are excluded. The only stated exception in that clause is ectopic pregnancy. Miscarriage is excluded unless due to an accident.",
+    "verbatim_context": "Medical treatment expenses traceable to childbirth (including complicated deliveries and caesarean sections incurred during hospitalization) except ectopic pregnancy; [...] Expenses towards miscarriage (unless due to an accident) and lawful medical termination of pregnancy during the policy period",
+    "source_reference": "Section D.1.18 Maternity Expenses (Code-Excl18) (Page 13)"
+  },
+  {
+    "id": "Q066",
+    "category": "Conversational / Persona-based",
+    "user_query": "honestly i want to cancel this policy, its been 5 months. i pay yearly. do i get anything back?",
+    "ground_truth_response": "You can cancel at any time by giving 7 days' written notice. For a policy term up to one year with no claims made during the policy period, the Company refunds proportionate premium for the unexpired period. Refunds apply to 'Yearly / Annual / One Time' premium frequency (so you qualify). No refund is made if any claim has been admitted or lodged or any benefit availed.",
+    "verbatim_context": "The Policyholder may cancel this policy by giving 7 days' written notice [...] refund proportionate premium for unexpired policy period, if the term of policy upto one year and there is no claim (s) made during the policy period. [...] A refund in accordance with E.1.2 a).a or E.1.2 a).b above shall be applicable for ‘Yearly / Annual / One Time’ premium payment frequency [...] no refunds of premium shall be made in respect of Cancellation where, any claim has been admitted or has been lodged or any benefit has been availed by the Insured Person under the Policy.",
+    "source_reference": "Section E.1.2 Cancellation (Page 15)"
+  },
+  {
+    "id": "Q067",
+    "category": "Conversational / Persona-based",
+    "user_query": "submitted all my reimbursement docs 3 weeks ago and NOTHING. no money no update. what are my rights here, who do i yell at",
+    "ground_truth_response": "Non-cashless claims must be settled within 15 days from submission; for delays, the Company must pay interest from the date of claim intimation until payment at 2% above the bank rate. To escalate: toll-free 1800 270 7000 or care.healthinsurance@adityabirlacapital.com; if unsatisfied, Head - Customer Care at carehead.healthinsurance@adityabirlacapital.com; then the grievance officer at gro.healthinsurance@adityabirlacapital.com. After that, you can approach the Insurance Ombudsman for your region (Annexure II) or lodge a grievance at https://bimabharosa.irdai.gov.in/.",
+    "verbatim_context": "Settlement of claims (other than cashless) shall be settled within 15 days from submission of claim. [...] interest from the date of receipt of claim intimation till the date of payment of claim at a rate of 2% above the bank rate. [...] Toll - Free: 1800 270 7000 [...] E-Mail: care.healthinsurance@adityabirlacapital.com [...] carehead.healthinsurance@adityabirlacapital.com [...] gro.healthinsurance@adityabirlacapital.com [...] Grievance may also be lodged at IRDAI Integrated Grievance Management System - https://bimabharosa.irdai.gov.in/",
+    "source_reference": "Section E.1.9 Claim Settlement (Page 17); Section E.1.8 Redressal of Grievance (Page 17)"
+  },
+  {
+    "id": "Q068",
+    "category": "Conversational / Persona-based",
+    "user_query": "wait so if I just walk a lot I get money back?? how many steps is a 'day'? i'm 62 btw",
+    "ground_truth_response": "Yes, via HealthReturns. One Active Day can be earned by recording 7,500 steps or more in a day for Insured Persons aged 60 and above (10,000 for under 60), tracked via the mobile app or a linked wearable. Other ways: a 30-minute fitness/yoga centre activity at the insurer's panel, burning 300+ calories in one session, or a recognized marathon/walkathon/cyclothon with timed certificate. Earnings depend on your Healthy Heart Score and Active Dayz count, up to 30% of monthly premium per month.",
+    "verbatim_context": "Recording 10,000 steps or more in a day for all Insured Persons Aged less than 60 years and 7,500 steps or more for all Insured Persons Aged 60 years above (tracked through Our mobile application or a wearable device linked to the Policy number) OR; [...] Completing a fitness centre or yoga centre activity for a minimum of 30 minutes at Our panel of fitness or yoga centers, OR; [...] Burning 300 calories or more in one exercise session per day OR; [...] The Insured Person can earn up to 30% of their Monthly Premium as HealthReturns™ based on the grid above.",
+    "source_reference": "Appendix A, Section C.12.2 HealthReturns - Step 2 Earn Active Dayz (Page 33)"
+  },
+  {
+    "id": "Q069",
+    "category": "Conversational / Persona-based",
+    "user_query": "my 22yo son is on our family floater and he's a gym freak, 15k steps a day lol. can HE earn the healthreturns thing?",
+    "ground_truth_response": "No. On a Family Floater, dependent children up to 25 years of age are not eligible for HealthReturns; the premium is allocated to the adults (weightage 1:1:0:0 for self, spouse and dependent children). The good news: HealthReturns earned by the adults can be used by any covered Insured Person on the Policy, including your son.",
+    "verbatim_context": "Dependent Children upto 25 years of Age shall not eligible for HealthReturns™. [...] Self , Spouse and Dependent Children (upto 25 yrs) 1:1:0:0 [...] Earned HealthReturnsTM can be utilized by any covered Insured Person under a Policy.",
+    "source_reference": "Appendix A, Section C.12.2 HealthReturns - Family Floater (Page 34)"
+  },
+  {
+    "id": "Q070",
+    "category": "Conversational / Persona-based",
+    "user_query": "omg dad collapsed and the ambulance took him to some random hospital that's NOT in your network. no cashless. what do i do now so we dont lose the claim?",
+    "ground_truth_response": "It can be claimed as reimbursement. Give written notice within 48 hours of admission or before discharge, whichever is earlier, with the policy number, policyholder name, insured's name/address, health card/photo ID/KYC, nature of illness, attending doctor, hospital and admission/discharge dates. If you're late, provide written reasons; delays beyond your control can be condoned. Submit documents within 30 days of discharge, including the non-network hospital's Registration Certificate/number. Road ambulance to the nearest hospital for emergency care is also covered.",
+    "verbatim_context": "For all claims for which Cashless Facilities have not been pre-authorised or for which treatment has not been taken at a Network Provider, We shall be given written notice of the claim along with the following details within 48 hours of admission to the Hospital or before discharge from the Hospital, whichever is earlier: [...] Reimbursement of Hospitalization, Day Care Treatment or Pre Hospitalization Expenses Within 30 days of date of discharge [...] Copy of the Hospital’s Registration Certificate/ Hospital Registration number in case of Hospitalization in any non-Network Provider of the Company [...] Expenses incurred on road Ambulance (domestic only) if the Insured Person is required to be transferred to the nearest Hospital for Emergency Care",
+    "source_reference": "Section E.2.7.1 d) For Reimbursement Claims (Page 22); Section E.2.7 table and b) iii. (Pages 20-21); Appendix A, Section C.1.1.1 a (Page 29)"
+  },
+  {
+    "id": "Q071",
+    "category": "Conversational / Persona-based",
+    "user_query": "my dad's been in hospital in Pune for almost 2 weeks now, I live in Delhi. flights are $$$. is there anything in the policy that helps family travel?",
+    "ground_truth_response": "If the optional Compassionate Visit cover is in force: when Hospitalization exceeds 10 days for an admissible C.1 claim, the cost of a two-way economy air ticket or travel fare for one immediate family member (spouse/live-in partner, children, dependent parent/parent-in-law) travelling to the place of Hospitalization and back is reimbursed up to INR 50,000. The insured must be hospitalized away from their Home as per the Policy Schedule, and it's reimbursement-only, once per hospitalization and once per Policy Year per insured; it reduces the Sum Insured.",
+    "verbatim_context": "in the event of Hospitalization of the Insured Person exceeding 10 days in relation to a claim admissible under Section C.1 [...] “Immediate family member” would mean spouse / live-in partner, children, and dependent parent / parent-in-law. [...] This benefit is applicable in the event of the Insured Person Being Hospitalized at a place away from his usual place of Home as mentioned in Policy Schedule. [...] This benefit is available for only one Immediate Family Member [...] the benefit amount will reduce the Sum Insured and will be available only on reimbursement basis",
+    "source_reference": "Appendix A, Section C.13.12 Compassionate Visit (Page 40)"
+  },
+  {
+    "id": "Q072",
+    "category": "Conversational / Persona-based",
+    "user_query": "doc says i need surgery for piles (embarrassing ugh). policy started about a year ago. am i covered or nah",
+    "ground_truth_response": "Probably not yet under standard terms. Hemorrhoids (Piles) is on the specified diseases list with a 24-month waiting period from inception of your first policy (not applicable to accidents). At about one year in, it would be covered only if you opted for 'Reduction in Specific Disease Waiting Period' (2 years to 1 year) at inception and have been covered without a break. If the piles were pre-existing, the longer PED waiting period applies.",
+    "verbatim_context": "Fissure, Fistula in Ano, Hemorrhoids (Piles), Pilonidal Sinus, [...] shall be excluded until the expiry of 24 months of continuous coverage after the date of inception of the first policy with us. [...] Reduction in Specific Disease Waiting Period 2 Years to 1 Year [...] If any of the specified disease / procedure falls under the Waiting Period specified for pre-existing diseases, then the longer of the two Waiting Periods shall apply.",
+    "source_reference": "Section D.1.2 f) list - Gastroenterology (Pages 10-11); Annexure III Optional Covers (Page 47)"
+  },
+  {
+    "id": "Q073",
+    "category": "Conversational / Persona-based",
+    "user_query": "Had a knee replacement last week. Surgeon wants me using a CPM machine and a wheelchair at home for a while. Does insurance pay for that equipment??",
+    "ground_truth_response": "Only if you have the optional Durable Medical Equipment Cover. It covers buying or renting listed equipment, including Wheelchair and Continuous Passive Motion devices in case of Knee Replacement, up to a combined INR 5 Lacs or Sum Insured, whichever is lower. It must be prescribed during hospitalization or within 30 days post-discharge, purchased/rented within 30 days of the recommendation, and linked to an admissible hospitalization. Without this cover, wheelchairs and external durable equipment are excluded. Note: Joint Replacement Surgery is on the 2-year specific waiting period list.",
+    "verbatim_context": "Continuous Passive motion devices in case of Knee Replacement [...] A combined sub-limit of INR 5 Lacs or up to Sum Insured, whichever is lower [...] The need for Durable Medical Equipment is prescribed by an authorised Medical Practitioner during Hospitalization or within 30 days post discharge of the Insured Person from the Hospital. [...] external durable medical equipment, wheelchairs, crutches [...] Joint Replacement Surgery",
+    "source_reference": "Appendix A, Section C.13.11 (Page 40); Annexure III (Page 47); Section D.2.4 c) (Page 13); Section D.1.2 f) list (Page 11)"
+  },
+  {
+    "id": "Q074",
+    "category": "Conversational / Persona-based",
+    "user_query": "crap i forgot to renew, it expired 8 days ago. annual premium. did i lose everything?? waiting periods start over???",
+    "ground_truth_response": "Not if you pay within the grace period. For non-monthly premium modes the grace period is 30 days; renewing within it maintains continuity of benefits without a break in policy (waiting period credit preserved). Super Credit is also available only if renewed/premium paid within the Grace Period. However, coverage is not available during the grace period, and any illness contracted between expiry and the new policy's inception is treated as a Pre-Existing Disease.",
+    "verbatim_context": "At the end of the Policy Period, the policy shall terminate and can be renewed within the Grace Period of fifteen days where premium payment mode is monthly and thirty days in all other cases to maintain continuity of benefits without break in policy. Coverage is not available during the grace period. [...] Super Credit shall be available only if the Policy is renewed/ premium paid within the Grace Period or before. [...] such disease/Illness/condition shall be treated as a Pre-Existing Disease.",
+    "source_reference": "Section E.1.3 Renewal of Policy iv (Page 16); Appendix A, Section C.11 iii (Page 31); Section E.2.5 d) (Page 20)"
+  },
+  {
+    "id": "Q075",
+    "category": "Conversational / Persona-based",
+    "user_query": "my cousin crashed his car after a party, he'd been drinking. hospital bills are huge. will the insurance pay?",
+    "ground_truth_response": "Likely not. The Behavioural Exclusions exclude any treatment for Injury resulting from the consumption of alcohol or any intoxicating substance. Treatment directly arising from breach of law with criminal intent is also excluded. For accident claims, the insurer requires a history of alcohol consumption or intoxication certified by the first treating doctor, and a treating doctor's letter on whether the patient was under the influence.",
+    "verbatim_context": "Any treatment for Injury resulting from the consumption of alcohol or any intoxicating substance, its intake or abuse thereof [...] Expenses for treatment directly arising from or consequent upon any Insured Person committing or attempting to commit a breach of law with criminal intent. [...] History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases,",
+    "source_reference": "Section D.2.2 Behavioural Exclusions c) (Page 13); Section D.1.10 Breach of law (Code-Excl10) (Page 12); Section E.2.7 b) xi. (Page 21)"
+  },
+  {
+    "id": "Q076",
+    "category": "Conversational / Persona-based",
+    "user_query": "i've had this policy for 6 years straight. i realized i never mentioned my high BP on the original form. can they reject my claims now because of that??",
+    "ground_truth_response": "After sixty continuous months (5 years) of coverage, including portability and migration, no policy or claim is contestable on grounds of non-disclosure or misrepresentation, except on grounds of established fraud. At 6 years of continuous coverage, this moratorium applies for the sums insured of the first policy (enhanced limits have their own 60 months from the enhancement date). The policy's limits, sub-limits, co-payments and deductibles still apply.",
+    "verbatim_context": "After completion of sixty continuous months of coverage (including portability and migration) in health insurance policy, no policy and claim shall be contestable by the insurer on grounds of non-disclosure, misrepresentation, except on grounds of established fraud. [...] The moratorium would be applicable for the sums insured of the first policy. [...] However, the policy still has limits, sub-limits, co-payments, and deductibles that apply",
+    "source_reference": "Section E.1.10 Moratorium Period, including Simpler version (Page 17)"
+  },
+  {
+    "id": "Q077",
+    "category": "Conversational / Persona-based",
+    "user_query": "Does it cover ayurveda? my grandma prefers ayurvedic treatment and might need to be admitted to an ayurvedic hospital",
+    "ground_truth_response": "Yes. AYUSH Treatment (Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy) is covered for In-patient Care in an AYUSH Hospital or AYUSH Day Care Centre, at actuals up to Sum Insured. The facility must meet the policy definition (e.g., a qualifying AYUSH Hospital needs at least 5 in-patient beds and a qualified AYUSH Medical Practitioner in charge round the clock). AYUSH treatment beyond this section is excluded.",
+    "verbatim_context": "The Company shall indemnify the Medical Expenses incurred for Inpatient Care of the Insured Person under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems of medicines during the Policy Period in any AYUSH Hospital or AYUSH Day Care Centre. [...] AYUSH Treatment Actuals up to Sum Insured [...] Having at least 5 In-patient beds; [...] Having qualified AYUSH Medical Practitioner in charge round the clock; [...] AYUSH Treatment Any form of AYUSH Treatments, except as mentioned under Section AYUSH Treatment in Appendix A",
+    "source_reference": "Appendix A, Section C.7 AYUSH Treatment (Page 30); Annexure III (Page 46); Section B.1 Definition 2 (Page 1); Section D.2.3 i) (Page 13)"
+  },
+  {
+    "id": "Q078",
+    "category": "Conversational / Persona-based",
+    "user_query": "did the face scan health thing and my heart score came out RED. so am i just locked out of the rewards now? kinda bummed",
+    "ground_truth_response": "Not locked out. With a Red score you still earn HealthReturns, at lower rates: e.g., 13+ Active Dayz in a month earns 6.0% of monthly premium (Level 5), 10-12 earns 3.6%, 7-9 earns 2.4%, 4-6 earns 1.2%. Annual slabs for Red: 4.0% at 275 Active Dayz and 10.0% at 325. A Red result means you're advised to undergo a regular Health Assessment for a second screening, and your score updates automatically if you complete another Health Assessment. The digital assessment is for screening only.",
+    "verbatim_context": "13 or more Level 5 6.0% 12% 30% [...] 275 4.0% 8.0% 20.0% [...] 325 10.0% 20.0% 50.0% [...] Red – Your body vitals are not within the normally acceptable range and you are advised to undergo a regular Health Assessment at your nearest facility for a second round of screening and better health insight. [...] will automatically be updated based on latest available test result if another Health AssessmentTM is completed.",
+    "source_reference": "Appendix A, Section C.12.1 Health Assessment (Page 32); Section C.12.2 grids (Pages 33-34)"
+  },
+  {
+    "id": "Q079",
+    "category": "Conversational / Persona-based",
+    "user_query": "I'm HIV positive and worried. If I need to be hospitalized for something related to it, will I be denied?",
+    "ground_truth_response": "HIV-related hospitalization is covered. The HIV / AIDS and STD Cover pays Medical Expenses during Hospitalization arising from conditions caused by or associated with HIV or HIV-related illnesses, including AIDS or AIDS Related Complex (ARC) and sexually transmitted diseases, at actuals up to Sum Insured. If HIV was diagnosed before the policy began, standard Pre-Existing Disease waiting period rules would apply.",
+    "verbatim_context": "HIV / AIDS and STD Cover: Medical Expenses incurred towards treatment taken by the Insured Person during Hospitalization Treatment under Section C.1 of the Insured Person arising out of condition caused by or associated with HIV or HIV related illnesses, including AIDS or AIDS related Complex (ARC) [...] HIV / AIDS and STD Cover Actuals up to Sum Insured",
+    "source_reference": "Appendix A, Section C.1.1.1 f (Page 29); Annexure III (Page 46)"
+  },
+  {
+    "id": "Q080",
+    "category": "Conversational / Persona-based",
+    "user_query": "my uncle's urologist wants to do green laser for his enlarged prostate. sounds fancy & expensive — does insurance cover these new-age procedures? he got the policy ~8 months ago",
+    "ground_truth_response": "Vaporisation of the Prostate (Green laser or holmium laser treatment) is on the list of Modern Procedures covered at actuals up to Sum Insured. However, Benign Hypertrophy / Enlargement of Prostate (BHP/BEP) is on the specified diseases list, which has a 24-month waiting period from inception (unless due to accident, or reduced to 1 year via the optional cover opted at inception). At ~8 months, it would not yet be covered under either the standard or the reduced waiting period.",
+    "verbatim_context": "Vaporisation of the Prostrate [...] (Green laser treatment or [...] holmium laser treatment) [...] Modern Procedures / Treatments Actuals up to Sum Insured for listed procedures [...] Benign Hypertrophy / Enlargement of Prostate (BHP / BEP) [...] shall be excluded until the expiry of 24 months of continuous coverage after the date of inception of the first policy with us.",
+    "source_reference": "Appendix A, Section C.1.1.1 e (Page 29); Annexure III (Page 46); Section D.1.2 f) Urogenital (Pages 10-11)"
+  },
+  {
+    "id": "Q081",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "What will my annual premium be for a 35-year-old in Zone 2 with a 10 lakh sum insured?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The policy wording states that premiums are age-banded and priced across 3 zones, but it does not publish any premium rates.",
+    "verbatim_context": "Premium Type Age Banded [...] Zone 2: Kolkata, Pune, Hyderabad, Chennai, Chandigarh, Mohali, Panchkula, Lucknow, Patna",
+    "source_reference": "Not answerable. Nearest related: Annexure III (Page 46); Section E.2.11 Zonal pricing (Page 26)"
+  },
+  {
+    "id": "Q082",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "Is Lilavati Hospital in Mumbai a network hospital for cashless treatment?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The document states that the complete list of Network Providers is available on the insurer's website, at its branches, or by phone.",
+    "verbatim_context": "The complete list of Network Providers is available on Our website and at Our branches and can also be obtained by contacting Us over the telephone.",
+    "source_reference": "Not answerable. Nearest related: Section E.2.7.1 a) i. (Page 21)"
+  },
+  {
+    "id": "Q083",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "What is the current RBI bank rate used to calculate penal interest on delayed claims?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The policy says interest is 2% above the bank rate fixed by the RBI as on the 1st day of the financial year in which the claim falls due, but it does not state the actual rate.",
+    "verbatim_context": "(Explanation: \"Bank rate\" shall mean rate fixed by the Reserve Bank of India (RBI) which is prevalent as on 1 st day of the financial year in which the claim has fallen due",
+    "source_reference": "Not answerable. Nearest related: Section E.1.9 Claim Settlement (Page 17)"
+  },
+  {
+    "id": "Q084",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "What deductible options are available on the Activ One VYTL variant?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. This document covers the Activ One MAX variant only.",
+    "verbatim_context": "N/A - no text in the document answers this query.",
+    "source_reference": "Not answerable - other product variants are not described in this document"
+  },
+  {
+    "id": "Q085",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "Does my policy cover vet bills if my dog needs surgery?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document.",
+    "verbatim_context": "N/A - no text in the document answers this query.",
+    "source_reference": "Not answerable - not addressed anywhere in the document"
+  },
+  {
+    "id": "Q086",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "What is Aditya Birla Health Insurance's claim settlement ratio for last year?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document.",
+    "verbatim_context": "N/A - no text in the document answers this query.",
+    "source_reference": "Not answerable - not addressed anywhere in the document"
+  },
+  {
+    "id": "Q087",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "How much tax can I save under Section 80D on the premium for this policy?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document.",
+    "verbatim_context": "N/A - no text in the document answers this query.",
+    "source_reference": "Not answerable - tax benefits are not addressed in the document"
+  },
+  {
+    "id": "Q088",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "Which TPA handles claims for Activ One MAX?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The document refers generically to an insurer and/or TPA but does not name any TPA.",
+    "verbatim_context": "Network Provider: means hospitals or health care providers enlisted by an insurer, TPA or jointly by an Insurer and TPA to provide medical services to an insured by a cashless facility.",
+    "source_reference": "Not answerable. Nearest related: Section B.1 Definition 43 - Network Provider (Page 4)"
+  },
+  {
+    "id": "Q089",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "If I hit Level 5 with a Green score this month, exactly how many rupees will I get back?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The document gives the percentage (30% of Monthly Premium for Level 5, Green) but not your premium amount, so a rupee figure cannot be determined from it.",
+    "verbatim_context": "*The grid above is calculated on the Monthly Premium.",
+    "source_reference": "Not answerable. Nearest related: Appendix A, Section C.12.2 Step 3 (Page 33)"
+  },
+  {
+    "id": "Q090",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "How many network hospitals does Aditya Birla have in Pune?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document.",
+    "verbatim_context": "N/A - no text in the document answers this query.",
+    "source_reference": "Not answerable - network size/counts are not stated in the document"
+  },
+  {
+    "id": "Q091",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "What GST rate is charged on the premium?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document.",
+    "verbatim_context": "N/A - no text in the document answers this query.",
+    "source_reference": "Not answerable - taxes on premium are not addressed in the document"
+  },
+  {
+    "id": "Q092",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "How do I reset my password on the Activ Health mobile app?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The document only mentions downloading and registering on the Activ Health Mobile App or ABHI website for the Digital Health Assessment.",
+    "verbatim_context": "Download and register on the Activ Health Mobile App or register on the ABHI Website.",
+    "source_reference": "Not answerable. Nearest related: Appendix A, Section C.12.1.a c) i. (Page 32)"
+  },
+  {
+    "id": "Q093",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "What percentage premium loading do smokers pay?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The document states the Company may apply loading based on health status, habits and lifestyle, but specifies no percentages.",
+    "verbatim_context": "The Company may apply loading on the premium, specific Waiting Period or any permanent exclusions, based on the declarations made in the Proposal Form and the health status, habits and lifestyle, past medical records, and the results of the Pre-Policy medical examination",
+    "source_reference": "Not answerable. Nearest related: Section E.2.4 Additional premium (Risk Loading) (Page 19)"
+  },
+  {
+    "id": "Q094",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "Which hospitals in Bengaluru are on the Preferred Provider Network list?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The document says the updated PPN hospital list is available on the insurer's website.",
+    "verbatim_context": "The updated list of Hospitals listed as “Preferred Provider Network” can be referred to on Our website.",
+    "source_reference": "Not answerable. Nearest related: Appendix A, Section C.13.5 ii. (Page 35)"
+  },
+  {
+    "id": "Q095",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "In which cities is the Home Health Care service available?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The document states the service is provided in select cities and directs you to contact the insurer or its website for the updated list.",
+    "verbatim_context": "Please contact Us or refer to Our website for updated list of treatment procedures and cities where home treatment service is provided.",
+    "source_reference": "Not answerable. Nearest related: Appendix A, Section C.6 f. (Page 30)"
+  },
+  {
+    "id": "Q096",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "What blood pressure reading counts as an 'abnormal' onboarding result that triggers the 6-month follow-up under the Chronic Management Program for asthma?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. Annexure IV mentions a follow-up 'only if Onboarding Abnormal' but does not define the thresholds.",
+    "verbatim_context": "Follow-up 6 months later (only if Onboarding Abnormal) BMI / BP / RR / HR / Random Glucose 1",
+    "source_reference": "Not answerable. Nearest related: Annexure IV - Asthma (Page 48)"
+  },
+  {
+    "id": "Q097",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "Who is the current CEO of Aditya Birla Health Insurance?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document.",
+    "verbatim_context": "N/A - no text in the document answers this query.",
+    "source_reference": "Not answerable - company leadership is not addressed in the document"
+  },
+  {
+    "id": "Q098",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "What is my sum insured and is Claim Protect active on my policy?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. Your individual sum insured and the covers in force are specified in your Policy Schedule, which is a separate document.",
+    "verbatim_context": "To check the applicability of these benefits to You please refer the Policy Schedule.",
+    "source_reference": "Not answerable. Nearest related: Section A Preamble - Annexures Summary (Page 1)"
+  },
+  {
+    "id": "Q099",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "By what percentage will my renewal premium go up next year?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The document states renewal premium alters based on age and that the Company may revise premium rates with three months' notice, but gives no percentages.",
+    "verbatim_context": "Renewal premium will alter based on Age. [...] The Insured Person shall be notified three months before the changes are effected.",
+    "source_reference": "Not answerable. Nearest related: Section E.2.5 a) (Page 19); Section E.1.4 (Page 16)"
+  },
+  {
+    "id": "Q100",
+    "category": "Out-of-Scope / Unanswerable",
+    "user_query": "I'm going to the US on vacation. What is the coverage limit for an emergency room visit there?",
+    "ground_truth_response": "I'm sorry, but that information is not available in this document. The document does not state any limit for emergency treatment abroad; it states treatment outside India is excluded unless specified as covered in your Policy Schedule.",
+    "verbatim_context": "Treatment taken outside India, unless specified to be covered in the Policy Schedule.",
+    "source_reference": "Not answerable. Nearest related: Section D.2.8 Geographical Exclusion (Page 14)"
+  }
+]

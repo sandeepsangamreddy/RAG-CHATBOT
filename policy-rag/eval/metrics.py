@@ -185,6 +185,7 @@ def aggregate_metrics(rows: list[dict[str, Any]]) -> dict[str, Any]:
             return sum(float(row.get(key, 0) or 0) for row in items) / total if total else 0.0
 
         judge_rows = [row["judge"] for row in items if row.get("judge")]
+        ragas_rows = [row["ragas"] for row in items if row.get("ragas")]
         pass_values = [row["pass"] for row in items if row.get("pass") is not None]
         pass_rate = (
             sum(pass_values) / len(pass_values)
@@ -207,6 +208,13 @@ def aggregate_metrics(rows: list[dict[str, Any]]) -> dict[str, Any]:
             "faithfulness": sum(j["faithfulness"] for j in judge_rows) / len(judge_rows) if judge_rows else None,
             "judge_hallucination_rate": sum(j["hallucination"] for j in judge_rows) / len(judge_rows)
             if judge_rows else None,
+            "ragas_context_precision": sum(r["context_precision"] for r in ragas_rows) / len(ragas_rows)
+            if ragas_rows else None,
+            "ragas_context_recall": sum(r["context_recall"] for r in ragas_rows) / len(ragas_rows)
+            if ragas_rows else None,
+            "ragas_faithfulness": sum(r["faithfulness"] for r in ragas_rows) / len(ragas_rows)
+            if ragas_rows else None,
+            "ragas_scored_items": len(ragas_rows),
             "refusal_precision": precision,
             "refusal_recall": recall,
             "refusal_f1": f1,

@@ -16,6 +16,7 @@ from anthropic import Anthropic
 from tqdm import tqdm
 
 from eval.metrics import item_metrics, judge_answer
+from eval.ragas_metrics import RagasEvaluator
 from eval.report import write_report
 from src.config import settings
 from src.rag import RAGPipeline
@@ -59,6 +60,8 @@ def _evaluate_one(
     pipeline: RAGPipeline,
     client: Any | None,
     do_judge: bool,
+    ragas_evaluator: RagasEvaluator | None,
+    rerank_enabled: bool,
 ) -> dict[str, Any]:
     started = time.perf_counter()
     result = pipeline.ask(item["user_query"], history=None)
@@ -72,6 +75,14 @@ def _evaluate_one(
             result["retrieved"], client, model=pipeline.settings.judge_model,
         )
     metrics = item_metrics(item, result, judge)
+    ragas_scores = None
+    if ragas_evaluator is not None and item["category"] != "Out-of-Scope / Unanswerable":
+        ragas_scores = ragas_evaluator.score(
+            question=item["user_query"],
+            reference=item["ground_truth_response"],
+            response=result["answer"],
+            contexts=[chunk["original_text"] for chunk in result["retrieved"]],
+        )
     retrieved_pages: list[int] = sorted({
         page
         for chunk in result["retrieved"]
@@ -92,6 +103,11 @@ def _evaluate_one(
         "refused": result["refused"],
         "rewritten_query": result["rewritten_query"],
         "latency": latency,
+        "judge": judge,
+        "judge_enabled": do_judge,
+        "ragas": ragas_scores,
+        "ragas_enabled": ragas_evaluator is not None,
+        "rerank_enabled": rerank_enabled,
         **metrics,
     }
     return row
@@ -102,6 +118,7 @@ def run(
     limit: int | None = None,
     category: str | None = None,
     do_judge: bool = True,
+    do_ragas: bool = False,
     rerank: bool | None = None,
     output_dir: Path | None = None,
     force: bool = False,
@@ -119,9 +136,22 @@ def run(
     destination.mkdir(parents=True, exist_ok=True)
     raw_path = destination / "raw_results.jsonl"
     previous = {} if force else _read_existing(raw_path)
-    selected = [item for item in data if str(item["id"]) not in previous]
     effective_settings = replace(settings, rerank=settings.rerank if rerank is None else rerank)
+    configuration = {
+        "judge_enabled": do_judge,
+        "ragas_enabled": do_ragas,
+        "rerank_enabled": effective_settings.rerank,
+    }
+    selected = [
+        item for item in data
+        if str(item["id"]) not in previous
+        or any(
+            previous[str(item["id"])].get(key) != value
+            for key, value in configuration.items()
+        )
+    ]
     pipeline = RAGPipeline(effective_settings)
+    ragas_evaluator = RagasEvaluator(effective_settings) if do_ragas else None
     client: Any | None = None
     if do_judge:
         if not effective_settings.anthropic_api_key:
@@ -132,7 +162,10 @@ def run(
     with raw_path.open(mode, encoding="utf-8") as raw_file:
         with ThreadPoolExecutor(max_workers=effective_settings.eval_workers) as pool:
             futures = {
-                pool.submit(_evaluate_one, item, pipeline, client, do_judge): item for item in selected
+                pool.submit(
+                    _evaluate_one, item, pipeline, client, do_judge, ragas_evaluator,
+                    effective_settings.rerank,
+                ): item for item in selected
             }
             for future in tqdm(as_completed(futures), total=len(futures), desc="Evaluating"):
                 item = futures[future]
@@ -154,6 +187,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--limit", type=int)
     parser.add_argument("--category")
     parser.add_argument("--no-judge", action="store_true")
+    parser.add_argument(
+        "--ragas",
+        action="store_true",
+        help="Add Ragas context precision, context recall, and faithfulness scores.",
+    )
     rerank_group = parser.add_mutually_exclusive_group()
     rerank_group.add_argument("--rerank", dest="rerank", action="store_true")
     rerank_group.add_argument("--no-rerank", dest="rerank", action="store_false")
@@ -166,6 +204,7 @@ def main(argv: list[str] | None = None) -> int:
         run(
             limit=args.limit, category=args.category, do_judge=not args.no_judge,
             rerank=args.rerank, output_dir=args.out, force=args.force,
+            do_ragas=args.ragas,
         )
     except (FileNotFoundError, ValueError, RuntimeError) as exc:
         LOGGER.error("%s", exc)

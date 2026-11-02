@@ -1,14 +1,13 @@
 # Activ One MAX Policy RAG
 
 A single-document retrieval-augmented assistant and evaluation harness for the
-Aditya Birla Activ One MAX policy wording. The policy PDF and 100-item golden
-dataset are inputs; put them in `data/` using the filenames below. They are not
+Aditya Birla Active One MAX policy wording. The policy PDF and 100-item golden dataset are inputs; put them in `data/` using the filenames below. They are not
 generated or included by this project.
 
 ## Requirements and setup
 
 - Python 3.11 or later
-- An Anthropic API key for answering and judge evaluation
+- An Anthropic API key for answering and optional judge/Ragas evaluation
 - The supplied 56-page policy PDF and golden JSON dataset
 
 From this directory in PowerShell:
@@ -43,11 +42,12 @@ by Git.
 # One question in the terminal
 .\.venv\Scripts\python.exe -m src.rag --ask "What is the free look period?"
 
-# Run the 10-item smoke evaluation first; disable judge scoring if desired.
-.\.venv\Scripts\python.exe -m eval.run_eval --limit 10
+# Run 10 items with the reranker and Ragas metrics enabled.
+.\.venv\Scripts\python.exe -m eval.run_eval --limit 10 --rerank --ragas --no-judge
 
-# Full 100-item evaluation. Add --no-judge to skip judge scoring.
-.\.venv\Scripts\python.exe -m eval.run_eval
+# Full 100-item evaluation with reranking and Ragas; --no-judge avoids
+# the separate legacy judge call (Ragas still uses Claude).
+.\.venv\Scripts\python.exe -m eval.run_eval --rerank --ragas --no-judge
 
 # Tests
 .\.venv\Scripts\python.exe -m pytest -q
@@ -56,12 +56,20 @@ by Git.
 The evaluation resumes by skipping IDs already in `eval/out/raw_results.jsonl`.
 Use `--force` to rerun selected cases and replace the raw output. Additional
 options are `--category "Out-of-Scope / Unanswerable"`, `--rerank`,
-`--no-rerank`, `--no-judge`, and `--out eval/out`. A run with `--no-judge`
-still needs the API key for answer generation; it only skips the separate
-LLM-as-judge calls.
+`--no-rerank`, `--ragas`, `--no-judge`, and `--out eval/out`. Ragas adds
+Claude-scored context precision, context recall, and answer faithfulness for
+in-scope cases. It requires the Anthropic API key and makes additional API
+calls. `--no-judge` skips the separate custom Claude judge but does not skip
+Ragas. Resume records are reused only when judge, Ragas, and reranker settings
+match; use `--force` to replace the output.
+
+The reranker is also available in the chat UI. Set `RERANK=true` in `.env` and
+restart Streamlit. The first run may download `BAAI/bge-reranker-base`; use
+`RERANK=false` or the eval `--no-rerank` option to disable it.
 
 The Makefile offers `install`, `ingest`, `chat`, `ask`, `eval`, and `test`
-targets. For example, `make ask Q="What is the free look period?"`.
+targets. For example, `make ask Q="What is the free look period?"` or
+`make eval EVAL_ARGS="--limit 10 --rerank --ragas --no-judge"`.
 
 ## Architecture
 
@@ -73,7 +81,7 @@ PyMuPDF blocks/tables -> glyph cleanup -> page/section/column-aware chunks
    |                                             |
    +-> SentenceTransformer -> Chroma             +-> BM25 pickle
                                     \               /
-                                     RRF + boosts + optional reranker
+                                     RRF + boosts + optional BGE reranker
                                                   |
                                                   v
                             retrieval confidence / refusal gate
@@ -82,6 +90,8 @@ PyMuPDF blocks/tables -> glyph cleanup -> page/section/column-aware chunks
                                  Claude grounded answer + citations
                                       |                     |
                                   Streamlit UI          Eval harness
+                                                             |
+                                                       optional Ragas
 ```
 
 ## Design decisions
